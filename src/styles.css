@@ -1,0 +1,293 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #f6f7f5;
+  background: #1a241f;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 16% 8%, rgba(253, 243, 184, 0.08), transparent 28rem),
+    radial-gradient(circle at 86% 24%, rgba(163, 230, 53, 0.07), transparent 24rem),
+    #1a241f;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+section {
+  scroll-margin-top: 132px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: #a3e635;
+  color: #1a241f;
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.07;
+  background-image: linear-gradient(rgba(255,255,255,0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.2) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to bottom, black, transparent 82%);
+}
+
+.aurora-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.82;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.font-handwriting {
+  font-family: "Segoe Script", "Bradley Hand ITC", "Lucida Handwriting", cursive;
+  letter-spacing: 0;
+}
+
+.animate-fade-up {
+  animation: fadeUp 700ms ease-out both;
+}
+
+.animate-fade-in {
+  animation: fadeIn 780ms ease-out 120ms both;
+}
+
+.reveal {
+  animation: fadeUp 650ms ease-out both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora-canvas,
+  .animate-fade-up,
+  .animate-fade-in,
+  .reveal {
+    animation: none;
+  }
+}
+
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 240ms ease, border-color 240ms ease, background 240ms ease, box-shadow 240ms ease;
+}
+
+.tilt-card:hover {
+  transform: translateY(-8px) rotateX(1deg) rotateY(-1.5deg);
+  box-shadow: 0 24px 54px rgba(163, 230, 53, 0.12);
+}
+
+.masked-profile {
+  clip-path: polygon(8% 0, 92% 0, 100% 16%, 100% 86%, 82% 100%, 0 100%, 0 12%);
+}
+
+.portfolio-shell {
+  transition: background-color 240ms ease, color 240ms ease;
+}
+
+.portfolio-shell.light {
+  color: #1a241f;
+  background:
+    radial-gradient(circle at 16% 8%, rgba(163, 230, 53, 0.2), transparent 22rem),
+    radial-gradient(circle at 88% 20%, rgba(163, 230, 53, 0.28), transparent 24rem),
+    radial-gradient(circle at 52% 70%, rgba(253, 243, 184, 0.55), transparent 28rem),
+    #fff9df !important;
+}
+
+.portfolio-shell.light .aurora-canvas {
+  opacity: 0.42;
+  mix-blend-mode: multiply;
+}
+
+.portfolio-shell.light .noise {
+  opacity: 0.04;
+  background-image: linear-gradient(rgba(26, 36, 31, 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 36, 31, 0.18) 1px, transparent 1px);
+}
+
+.portfolio-shell.light [class*="bg-darkArmy"] {
+  background-color: rgba(255, 249, 223, 0.9) !important;
+}
+
+.portfolio-shell.light [class*="bg-army"] {
+  background-color: rgba(253, 243, 184, 0.58) !important;
+}
+
+.portfolio-shell.light [class*="text-offWhite"] {
+  color: rgba(26, 36, 31, 0.9) !important;
+}
+
+.portfolio-shell.light [class*="border-offWhite"] {
+  border-color: rgba(26, 36, 31, 0.12) !important;
+}
+
+.portfolio-shell.light [class*="bg-pastel"] {
+  background-color: rgba(163, 230, 53, 0.2) !important;
+}
+
+.portfolio-shell.light [class*="text-pastel"] {
+  color: #4f7c0f !important;
+}
+
+.portfolio-shell.light [class*="border-pastel"] {
+  border-color: rgba(163, 230, 53, 0.6) !important;
+}
+
+.portfolio-shell.light [class*="bg-offWhite"] {
+  background-color: rgba(253, 243, 184, 0.72) !important;
+}
+
+.portfolio-shell.light [class*="shadow-soft"] {
+  box-shadow: 0 22px 58px rgba(26, 36, 31, 0.12) !important;
+}
+
+.portfolio-shell.light nav {
+  background-color: rgba(255, 249, 223, 0.9) !important;
+  border-color: rgba(122, 160, 26, 0.22) !important;
+}
+
+.portfolio-shell.light .tilt-card {
+  background-color: rgba(255, 255, 255, 0.34) !important;
+  border-color: rgba(26, 36, 31, 0.12) !important;
+  backdrop-filter: blur(18px) saturate(1.18);
+}
+
+.portfolio-shell.light .tilt-card:hover {
+  box-shadow: 0 24px 54px rgba(74, 93, 78, 0.16);
+}
+
+.portfolio-shell.light .experience-card-header {
+  background-color: #4f7c0f !important;
+  color: #fff9df !important;
+  border-color: rgba(163, 230, 53, 0.22) !important;
+}
+
+.portfolio-shell.light .experience-card-header svg {
+  color: #a3e635;
+}
+
+.portfolio-shell.light .experience-card {
+  background-color: rgba(9, 39, 4, 0.72) !important;
+  border-color: rgba(79, 124, 15, 0.22) !important;
+}
+
+.portfolio-shell.light .experience-card h3{
+  color: #022703 !important;
+}
+
+
+.portfolio-shell.light .experience-card p,
+.portfolio-shell.light .experience-card li {
+  color: #b7b15b !important;
+}
+
+
+
+.portfolio-shell.light .hero-work-button {
+  background-color: #4f7c0f !important;
+  color: #fff9df !important;
+}
+
+.portfolio-shell.light .hero-work-button:hover {
+  background-color: #85d023 !important;
+}
+
+.portfolio-shell.light .experience-period {
+  color: #92ea18 !important;
+  font-weight: 800;
+}
+
+.portfolio-shell.light .experience-card [class*="bg-pastel"] {
+  background-color: rgba(223, 231, 74, 0.13) !important;
+}
+
+.portfolio-shell.light .experience-card [class*="text-pastel"] {
+  color: #183c0a !important;
+}
+
+.portfolio-shell.light .experience-card-header p {
+  color: #f6f8ed !important;
+}
+
+.portfolio-shell.light .impact-carousel > [class*="from-darkArmy"] {
+  --tw-gradient-from: #fff9df var(--tw-gradient-from-position) !important;
+}
+
+.portfolio-shell.light .volunteer-card {
+  background-color: rgba(255, 255, 255, 0.76) !important;
+  border: 1px solid rgba(26, 36, 31, 0.08);
+  box-shadow: 0 20px 60px rgba(26, 36, 31, 0.1);
+}
+
+.portfolio-shell.light .impact-slide {
+  background-color: rgba(26, 77, 45, 0.8) !important;
+  backdrop-filter: blur(18px) saturate(1.18);
+}
+
+.portfolio-shell.light .impact-slide [class*="bg-darkArmy"] {
+  background-color: rgba(26, 77, 45, 0.94) !important;
+}
+
+.portfolio-shell.light .impact-slide h3,
+.portfolio-shell.light .impact-slide [class*="text-offWhite"] {
+  color: #fff9df !important;
+}
+
+.portfolio-shell.light footer {
+  color: rgba(26, 36, 31, 0.55) !important;
+}

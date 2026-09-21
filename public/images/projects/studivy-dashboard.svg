@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750">
+  <rect width="1200" height="750" fill="#4A5D4E"/>
+  <path d="M0 0h1200v750H0z" fill="#1A241F" opacity=".78"/>
+  <rect x="92" y="92" width="1016" height="566" rx="22" fill="#F6F7F5"/>
+  <rect x="142" y="150" width="288" height="450" rx="16" fill="#1A241F"/>
+  <rect x="478" y="150" width="582" height="132" rx="16" fill="#FDF3B8"/>
+  <rect x="478" y="326" width="258" height="274" rx="16" fill="#4A5D4E"/>
+  <rect x="780" y="326" width="280" height="274" rx="16" fill="#4A5D4E"/>
+  <path d="M536 548V430m62 118V386m62 162v-84m62 84V414" stroke="#A3E635" stroke-width="24" stroke-linecap="round"/>
+  <path d="M850 510c44-112 150-112 172 0" fill="none" stroke="#FDF3B8" stroke-width="20" stroke-linecap="round"/>
+  <text x="526" y="232" fill="#1A241F" font-family="Inter, Arial" font-size="54" font-weight="900">STUDIVY</text>
+</svg>

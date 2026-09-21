@@ -1,0 +1,29 @@
+<svg width="1200" height="520" viewBox="0 0 1200 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1200" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6F7F5"/>
+      <stop offset="0.52" stop-color="#DDE8E7"/>
+      <stop offset="1" stop-color="#B8C7C5"/>
+    </linearGradient>
+    <linearGradient id="shade" x1="600" y1="160" x2="600" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A241F" stop-opacity="0"/>
+      <stop offset="0.62" stop-color="#1A241F" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#1A241F" stop-opacity="0.82"/>
+    </linearGradient>
+    <filter id="softBlur" x="-20%" y="45%" width="140%" height="75%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="520" fill="url(#sky)"/>
+  <path d="M0 280L285 130H1200V520H0V280Z" fill="#F4F5F0"/>
+  <path d="M286 130H1160L1200 176V230H342L286 130Z" fill="#E7E9E4"/>
+  <path d="M360 232H1120V520H360V232Z" fill="#F8F9F6"/>
+  <path d="M96 300H315V520H96V300Z" fill="#E9ECE7"/>
+  <path d="M130 328H282V520H130V328Z" fill="#1A241F" opacity="0.78"/>
+  <path d="M388 284H480V420H388V284ZM540 284H632V420H540V284ZM692 284H784V420H692V284ZM844 284H936V420H844V284Z" fill="#D2D8D4"/>
+  <path d="M0 462H1200V520H0V462Z" fill="#CAD0CB"/>
+  <text x="760" y="188" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="800" fill="#2578B8">OMRON</text>
+  <text x="762" y="228" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="500" fill="#4A5D4E">Sensing Tomorrow</text>
+  <rect y="250" width="1200" height="270" fill="url(#shade)"/>
+  <rect y="318" width="1200" height="202" fill="#1A241F" opacity="0.32" filter="url(#softBlur)"/>
+</svg>
