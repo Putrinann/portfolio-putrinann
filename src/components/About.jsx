@@ -11,9 +11,9 @@ export default function About() {
 
   return (
     <Section id="about" eyebrow="About" title="A little more about me.">
-      <div className="grid gap-5 lg:grid-cols-[260px_minmax(0,1fr)] lg:items-start">
-        <div className="relative mx-auto flex w-full max-w-[260px] flex-col items-center">
-          <div className="relative w-full overflow-hidden rounded-lg bg-[#1e221f] p-4 shadow-soft">
+      <div className="grid gap-5 lg:grid-cols-[300px_minmax(0,1fr)] lg:items-start">
+        <div className="relative mx-auto flex w-full max-w-[300px] flex-col items-center">
+          <div className="relative w-full overflow-hidden min-h-[620px] rounded-lg bg-[#1e221f] p-5 shadow-soft">
             <div className="absolute inset-0 opacity-70">
               <div className="absolute -right-16 top-8 h-52 w-80 -rotate-45 rounded-[50%] border border-electric/35" />
               <div className="absolute -left-24 top-20 h-48 w-80 rotate-12 rounded-[50%] border border-pastel/28" />
@@ -24,10 +24,10 @@ export default function About() {
               <img
                 src="/images/profile/putri-red-background.jpeg"
                 alt="Putri Nurul Annisa formal portrait"
-                className="h-[245px] w-full object-cover object-top opacity-95"
+                className="h-[330px] w-full object-cover object-top opacity-95"
               />
             </div>
-            <div className="relative mt-4 border-t border-electric/25 pt-3">
+            <div className="relative mt-6 border-t border-electric/25 pb-4 pt-4">
               <div className="mb-3 flex justify-between text-[0.48rem] font-black uppercase tracking-[0.16em] text-electric/70">
                 <span>Portfolio</span>
                 <span>Information Systems</span>
@@ -49,7 +49,7 @@ export default function About() {
                   <span className="inline-flex rounded-full border border-pastel/20 bg-pastel/10 px-3 py-1 text-[0.62rem] font-bold uppercase tracking-[0.1em] text-pastel">
                     2023 - 2026
                   </span>
-                  <p className="mt-1 text-[0.68rem] font-semibold  tracking-[0.12em] text-offWhite/55">2years  10months</p>
+                  <p className="mt-1 text-[0.68rem] font-semibold  tracking-[0.12em] text-offWhite/55">2 years 10 months</p>
                 </div>
               </div>
               <div className="border-t border-offWhite/10 pt-3">
