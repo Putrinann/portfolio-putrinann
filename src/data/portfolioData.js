@@ -93,6 +93,7 @@ export const projects = [
     title: "Vanilla Booth",
     partner: "Virtual Photobooth Web App",
     liveUrl: "https://vanilla-virtualbooth.vercel.app/",
+    ctaLabel: "Try It",
     images: [
       "/images/projects/vanilla-booth-empty.png",
       "/images/projects/vanilla-booth-upload.png",
@@ -108,11 +109,13 @@ export const projects = [
     eyebrow: "Project 02",
     title: "BIMBI",
     partner: "Kindergarten Activity & Habit Tracker",
+    liveUrl: "https://bimbi-kindergarten.vercel.app/",
+    ctaLabel: "Visit",
     images: [
+      "/images/projects/bimbi-report.png",
       "/images/projects/bimbi-landing.png",
       "/images/projects/bimbi-parent-journal.png",
       "/images/projects/bimbi-material-history.png",
-      "/images/projects/bimbi-report.png",
       "/images/projects/bimbi-teacher-dashboard.png"
     ],
     description:
@@ -299,6 +302,16 @@ export const certifications = [
     title: "Finalist - IDEAS National Business Plan Competition Batch 11",
     issuer: "FEB UGM",
     image: "/images/certifications/feb-ugm-business-plan-finalist.png"
+  },
+  {
+    title: "Youth Today x Join AIESEC - Enhancing Communication Through Critical Thinking",
+    issuer: "AIESEC",
+    image: "/images/certifications/aiesec-youth-today.png"
+  },
+  {
+    title: "Internship Program - PT Omron Manufacturing of Indonesia",
+    issuer: "Omron",
+    image: "/images/certifications/omron-internship-certificate.png"
   }
 ];
 

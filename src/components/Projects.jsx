@@ -71,7 +71,7 @@ function ProjectCard({ project }) {
               className="inline-flex items-center gap-1 rounded-full bg-electric px-3 py-1 text-[0.68rem] font-black uppercase tracking-[0.08em] text-darkArmy transition hover:bg-pastel"
             >
               <ArrowUpRight size={13} />
-              Try It
+              {project.ctaLabel || "Visit"}
             </a>) : null}
         </div>
         <h3 className="text-lg font-semibold leading-6 text-offWhite">{project.title}</h3>
