@@ -89,6 +89,21 @@ export const experiences = [
 export const projects = [
   {
     eyebrow: "Project 01",
+    title: "Vanilla Booth",
+    partner: "Virtual Photobooth Web App",
+    images: [
+      "/images/projects/vanilla-booth-empty.png",
+      "/images/projects/vanilla-booth-upload.png",
+      "/images/projects/vanilla-booth-decorate-news.png",
+      "/images/projects/vanilla-booth-decorate-retro.png",
+      "/images/projects/vanilla-booth-decorate-worn.png"
+    ],
+    description:
+      "A playful virtual photobooth where users can take photos with the camera or upload from their gallery, choose shots to decorate, then customize them with layouts, themes, filters, zoom, drag adjustment, and cute sticker details.",
+    tags: ["Camera Capture", "Photo Upload", "Image Decoration", "Filters", "Stickers", "Interactive UI"]
+  },
+  {
+    eyebrow: "Project 02",
     title: "Warehouse Digitalization System",
     partner: "PT OMRON MANUFACTURING OF INDONESIA",
     images: [
@@ -108,7 +123,7 @@ export const projects = [
     tags: ["React", "Node.js", "SQL Server", "REST API", "System Testing", "User Training"]
   },
   {
-    eyebrow: "Project 02",
+    eyebrow: "Project 03",
     title: "Plant Cycle Time Dashboard",
     partner: "PT Kalbio Global Medika / Kalbe",
     images: [
@@ -124,7 +139,7 @@ export const projects = [
     tags: ["Python", "PostgreSQL", "Dashboard", "Process Analytics"]
   },
   {
-    eyebrow: "Project 03",
+    eyebrow: "Project 04",
     title: "STUDIVY",
     partner: "Student Performance Prediction Dashboard",
     images: [
@@ -138,7 +153,7 @@ export const projects = [
     tags: ["Django", "Scikit-Learn", "PostgreSQL", "Chart.js", "Machine Learning"]
   },
   {
-    eyebrow: "Project 04",
+    eyebrow: "Project 05",
     title: "Shoe Revenue Dashboard",
     partner: "Meilan Store",
     images: [
