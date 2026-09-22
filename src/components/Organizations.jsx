@@ -23,38 +23,28 @@ export default function Organizations({ embedded = false }) {
 
   const content = (
     <div className="grid gap-5 lg:grid-cols-2 lg:items-center">
-      <div className="volunteer-card rounded-lg border border-pink-200/70 bg-[#f8dfdc]/95 p-4 text-darkArmy shadow-soft">
-        <div className="grid gap-3 sm:grid-cols-[0.42fr_0.58fr]">
-          <div className="grid gap-3">
-            <div className="rounded-md bg-[#fff6eb]/75 p-4">
-              <div className="flex items-start gap-3">
-                <HeartHandshake className="mt-1 h-7 w-7 shrink-0" />
-                <div>
-                  <p className="text-[0.65rem] font-black uppercase tracking-[0.18em] text-darkArmy/55">Volunteer</p>
-                  <h3 className="text-xl font-black leading-6">Moments</h3>
-                </div>
+      <div className="volunteer-card rounded-lg border border-pink-200/70 bg-[#f8dfdc]/95 p-3 text-darkArmy shadow-soft sm:p-4">
+        <div className="grid gap-3 sm:grid-cols-2 sm:auto-rows-[15rem]">
+          <div className="flex min-h-[13rem] flex-col justify-center rounded-md bg-[#fff6eb]/80 p-4 sm:min-h-0">
+            <div className="flex items-start gap-3">
+              <HeartHandshake className="mt-1 h-7 w-7 shrink-0" />
+              <div>
+                <p className="text-[0.65rem] font-black uppercase tracking-[0.18em] text-darkArmy/55">Volunteer</p>
+                <h3 className="text-xl font-black leading-6">Moments</h3>
               </div>
-              <blockquote className="mt-3 text-xs font-semibold leading-5 text-darkArmy/68">
-                "Volunteering has taught me to lead with empathy and act with purpose."
-              </blockquote>
             </div>
-            <figure className="relative min-h-[16rem] overflow-hidden rounded-md bg-[#fff6eb]/75 sm:min-h-[18rem]">
-              <img src={volunteerMoments[0].image} alt={volunteerMoments[0].title} className="h-full w-full object-cover" />
-              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-darkArmy/82 to-transparent p-3 text-xs font-bold text-offWhite">
-                {volunteerMoments[0].title}
+            <blockquote className="mt-4 text-xs font-semibold leading-5 text-darkArmy/72">
+              "Volunteering has taught me to lead with empathy and act with purpose."
+            </blockquote>
+          </div>
+          {volunteerMoments.map((moment) => (
+            <figure key={moment.title} className="relative min-h-[13rem] overflow-hidden rounded-md bg-[#fff6eb]/75 sm:min-h-0">
+              <img src={moment.image} alt={moment.title} className="h-full w-full object-cover" />
+              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-darkArmy/95 via-darkArmy/70 to-transparent px-3 pb-3 pt-12 text-xs font-bold leading-4 text-offWhite">
+                {moment.title}
               </figcaption>
             </figure>
-          </div>
-          <div className="grid gap-3">
-            {volunteerMoments.slice(1).map((moment) => (
-              <figure key={moment.title} className="relative min-h-[13rem] overflow-hidden rounded-md bg-[#fff6eb]/75 sm:min-h-[15rem]">
-                <img src={moment.image} alt={moment.title} className="h-full w-full object-cover" />
-                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-darkArmy/82 to-transparent p-3 text-xs font-bold text-offWhite">
-                  {moment.title}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
+          ))}
         </div>
       </div>
       <div

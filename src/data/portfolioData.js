@@ -225,7 +225,6 @@ export const organizations = [
   { title: "PR External Committee - Computing Sport Games Olympiad (2025)" },
   { title: "Treasurer - President University Computer and Technology Enthusiast Club" },
   { title: "Multimedia and Design - Investment Club Area 3" },
-  { title: "Founder - Namazone" },
   {
     title: "Volunteer - Cemar Berbagi at Yayasan Yatim Darul Aitam (2024)",
     image: "/images/certifications/cemar-berbagi-volunteer.png"
@@ -246,7 +245,7 @@ export const organizations = [
     title: "Committee - Youth Harmony Workshop Art & Craft at Yayasan Kanker Indonesia (2024)",
     image: "/images/certifications/youth-harmony-workshop-certificate.png"
   },
-  { title: "Team Leader - Buzzter.id (Achieved 60-120% monthly profit margin)" }
+  { title: "Team Leader - Buzzter.id Beverages Business" }
 ];
 
 export const certifications = [
