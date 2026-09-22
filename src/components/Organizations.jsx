@@ -1,7 +1,7 @@
 import { ArrowLeft, ArrowRight, HeartHandshake } from "lucide-react";
 import { useState } from "react";
 import Section from "./Section.jsx";
-import { organizations } from "../data/portfolioData.js";
+import { organizations, volunteerMoments } from "../data/portfolioData.js";
 
 export default function Organizations({ embedded = false }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -22,15 +22,36 @@ export default function Organizations({ embedded = false }) {
   };
 
   const content = (
-    <div className="grid gap-5 lg:grid-cols-[0.45fr_1.55fr] lg:items-center">
-      <div className="volunteer-card rounded-lg bg-offWhite p-5 text-darkArmy">
-        <HeartHandshake className="mb-5 h-7 w-7" />
-        <blockquote className="text-lg font-semibold leading-7">
-          "Volunteering has taught me to lead with empathy and act with purpose."
-        </blockquote>
+    <div className="grid gap-5 lg:grid-cols-2 lg:items-center">
+      <div className="volunteer-card rounded-lg bg-offWhite p-4 text-darkArmy">
+        <div className="mb-4 flex items-center gap-3">
+          <HeartHandshake className="h-7 w-7" />
+          <div>
+            <p className="text-[0.65rem] font-black uppercase tracking-[0.18em] text-darkArmy/55">Volunteer</p>
+            <h3 className="text-xl font-black leading-6">Moments</h3>
+          </div>
+        </div>
+        <div className="grid h-[360px] grid-cols-2 gap-3 overflow-hidden sm:h-[390px]">
+          <figure className="relative overflow-hidden rounded-md bg-darkArmy/5">
+            <img src={volunteerMoments[0].image} alt={volunteerMoments[0].title} className="h-full w-full object-cover" />
+            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-darkArmy/80 to-transparent p-3 text-xs font-bold text-offWhite">
+              {volunteerMoments[0].title}
+            </figcaption>
+          </figure>
+          <div className="grid gap-3">
+            {volunteerMoments.slice(1).map((moment) => (
+              <figure key={moment.title} className="relative overflow-hidden rounded-md bg-darkArmy/5">
+                <img src={moment.image} alt={moment.title} className="h-full w-full object-cover" />
+                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-darkArmy/80 to-transparent p-3 text-xs font-bold text-offWhite">
+                  {moment.title}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
       </div>
       <div
-        className="impact-carousel relative cursor-grab overflow-hidden py-4 active:cursor-grabbing"
+        className="impact-carousel relative cursor-grab overflow-hidden py-2 active:cursor-grabbing"
         onMouseDown={(event) => setDragStart(event.clientX)}
         onMouseUp={(event) => handleDragEnd(event.clientX)}
         onMouseLeave={(event) => handleDragEnd(event.clientX)}
@@ -38,13 +59,13 @@ export default function Organizations({ embedded = false }) {
         onTouchEnd={(event) => handleDragEnd(event.changedTouches[0].clientX)}
       >
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(163,230,53,0.16),transparent_34rem)]" />
-        <div className="relative h-[420px] sm:h-[440px]">
+        <div className="relative h-[430px] sm:h-[450px]">
           {organizations.map((item, index) => {
             const isActive = index === activeIndex;
             const offset = getOffset(index);
             const absOffset = Math.abs(offset);
             const hidden = absOffset > 3;
-            const translateX = offset * 176;
+            const translateX = offset * 146;
             const translateY = isActive ? 0 : 28 + absOffset * 6;
             const scale = Math.max(0.72, 1 - absOffset * 0.12);
             const zIndex = 20 - absOffset;
@@ -52,7 +73,7 @@ export default function Organizations({ embedded = false }) {
             return (
               <article
                 key={item.title || item}
-                className={`impact-slide absolute left-1/2 top-3 flex w-[20rem] -translate-x-1/2 flex-col overflow-hidden rounded-lg transition-all duration-500 ease-out sm:w-[23rem] ${
+                className={`impact-slide absolute left-1/2 top-3 flex w-[18rem] -translate-x-1/2 flex-col overflow-hidden rounded-lg transition-all duration-500 ease-out sm:w-[21rem] ${
                   isActive ? "bg-darkArmy shadow-[0_28px_90px_rgba(163,230,53,0.18)]" : "bg-darkArmy/70"
                 } ${hidden ? "pointer-events-none opacity-0" : ""}`}
                 style={{

@@ -201,6 +201,21 @@ export const bioCards = [
   }
 ];
 
+export const volunteerMoments = [
+  {
+    title: "Community & Volunteer Highlights",
+    image: "/images/impact/volunteer-moments-collage.png"
+  },
+  {
+    title: "Creative Content & Committee Work",
+    image: "/images/impact/volunteer-content-moments.png"
+  },
+  {
+    title: "President University Fashion Week Moments",
+    image: "/images/impact/volunteer-committee-moments.png"
+  }
+];
+
 export const organizations = [
   { title: "Event Organizer Student Awarding Night - BEM President University (2024)" },
   {
@@ -211,7 +226,23 @@ export const organizations = [
   { title: "Treasurer - President University Computer and Technology Enthusiast Club" },
   { title: "Multimedia and Design - Investment Club Area 3" },
   { title: "Founder - Namazone" },
-  { title: "Volunteer - ImpactED 100 & Yayasan Kanker Indonesia" },
+  {
+    title: "Volunteer - Cemar Berbagi at Yayasan Yatim Darul Aitam (2024)",
+    image: "/images/certifications/cemar-berbagi-volunteer.png"
+  },
+  {
+    title: "Delegate - ImpactED 1.0 by AIESEC in President University (2024)",
+    image: "/images/certifications/impacted-joining-certificate.png"
+  },
+  {
+    title: "Participant - Youth Today x Join AIESEC (2024)",
+    image: "/images/certifications/aiesec-youth-today.png"
+  },
+  {
+    title: "Volunteer - Sehari Mengabdi by SISI Indonesia (2024)",
+    image: "/images/certifications/sisi-volunteer-certificate.png"
+  },
+  { title: "Volunteer - Yayasan Kanker Indonesia" },
   { title: "Team Leader - Buzzter.id (Achieved 60-120% monthly profit margin)" }
 ];
 
