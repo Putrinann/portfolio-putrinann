@@ -23,29 +23,33 @@ export default function Organizations({ embedded = false }) {
 
   const content = (
     <div className="grid gap-5 lg:grid-cols-2 lg:items-center">
-      <div className="volunteer-card rounded-lg border border-pastel/30 bg-[#f8dfdc]/90 p-4 text-darkArmy shadow-soft">
-        <div className="mb-4 flex items-start gap-3">
-          <HeartHandshake className="mt-1 h-7 w-7" />
-          <div>
-            <p className="text-[0.65rem] font-black uppercase tracking-[0.18em] text-darkArmy/55">Volunteer</p>
-            <h3 className="text-xl font-black leading-6">Moments</h3>
-            <blockquote className="mt-2 max-w-md text-xs font-semibold leading-5 text-darkArmy/62">
-              "Volunteering has taught me to lead with empathy and act with purpose."
-            </blockquote>
+      <div className="volunteer-card rounded-lg border border-pink-200/70 bg-[#f8dfdc]/95 p-4 text-darkArmy shadow-soft">
+        <div className="grid gap-3 sm:grid-cols-[0.42fr_0.58fr]">
+          <div className="grid gap-3">
+            <div className="rounded-md bg-[#fff6eb]/75 p-4">
+              <div className="flex items-start gap-3">
+                <HeartHandshake className="mt-1 h-7 w-7 shrink-0" />
+                <div>
+                  <p className="text-[0.65rem] font-black uppercase tracking-[0.18em] text-darkArmy/55">Volunteer</p>
+                  <h3 className="text-xl font-black leading-6">Moments</h3>
+                </div>
+              </div>
+              <blockquote className="mt-3 text-xs font-semibold leading-5 text-darkArmy/68">
+                "Volunteering has taught me to lead with empathy and act with purpose."
+              </blockquote>
+            </div>
+            <figure className="relative min-h-[16rem] overflow-hidden rounded-md bg-[#fff6eb]/75 sm:min-h-[18rem]">
+              <img src={volunteerMoments[0].image} alt={volunteerMoments[0].title} className="h-full w-full object-cover" />
+              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-darkArmy/82 to-transparent p-3 text-xs font-bold text-offWhite">
+                {volunteerMoments[0].title}
+              </figcaption>
+            </figure>
           </div>
-        </div>
-        <div className="grid h-[330px] grid-cols-2 gap-3 overflow-hidden sm:h-[350px]">
-          <figure className="relative overflow-hidden rounded-md bg-[#fff6eb]/70">
-            <img src={volunteerMoments[0].image} alt={volunteerMoments[0].title} className="h-full w-full object-contain" />
-            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-darkArmy/80 to-transparent p-3 text-xs font-bold text-offWhite">
-              {volunteerMoments[0].title}
-            </figcaption>
-          </figure>
           <div className="grid gap-3">
             {volunteerMoments.slice(1).map((moment) => (
-              <figure key={moment.title} className="relative overflow-hidden rounded-md bg-[#fff6eb]/70">
-                <img src={moment.image} alt={moment.title} className="h-full w-full object-contain" />
-                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-darkArmy/80 to-transparent p-3 text-xs font-bold text-offWhite">
+              <figure key={moment.title} className="relative min-h-[13rem] overflow-hidden rounded-md bg-[#fff6eb]/75 sm:min-h-[15rem]">
+                <img src={moment.image} alt={moment.title} className="h-full w-full object-cover" />
+                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-darkArmy/82 to-transparent p-3 text-xs font-bold text-offWhite">
                   {moment.title}
                 </figcaption>
               </figure>
@@ -54,14 +58,13 @@ export default function Organizations({ embedded = false }) {
         </div>
       </div>
       <div
-        className="impact-carousel relative cursor-grab overflow-hidden py-2 active:cursor-grabbing"
+        className="impact-carousel relative cursor-grab overflow-hidden active:cursor-grabbing"
         onMouseDown={(event) => setDragStart(event.clientX)}
         onMouseUp={(event) => handleDragEnd(event.clientX)}
         onMouseLeave={(event) => handleDragEnd(event.clientX)}
         onTouchStart={(event) => setDragStart(event.touches[0].clientX)}
         onTouchEnd={(event) => handleDragEnd(event.changedTouches[0].clientX)}
       >
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(163,230,53,0.16),transparent_34rem)]" />
         <div className="relative h-[430px] sm:h-[450px]">
           {organizations.map((item, index) => {
             const isActive = index === activeIndex;
@@ -77,12 +80,12 @@ export default function Organizations({ embedded = false }) {
               <article
                 key={item.title || item}
                 className={`impact-slide absolute left-1/2 top-3 flex w-[18rem] -translate-x-1/2 flex-col overflow-hidden rounded-lg transition-all duration-500 ease-out sm:w-[21rem] ${
-                  isActive ? "bg-darkArmy shadow-[0_28px_90px_rgba(163,230,53,0.18)]" : "bg-darkArmy/70"
+                  isActive ? "bg-darkArmy shadow-[0_28px_90px_rgba(255,151,190,0.2)]" : "bg-darkArmy/35"
                 } ${hidden ? "pointer-events-none opacity-0" : ""}`}
                 style={{
                   transform: `translateX(calc(-50% + ${translateX}px)) translateY(${translateY}px) scale(${scale})`,
                   zIndex,
-                  opacity: hidden ? 0 : isActive ? 1 : 0.36 + Math.max(0, 0.22 - absOffset * 0.04),
+                  opacity: hidden ? 0 : isActive ? 1 : 0.22 + Math.max(0, 0.16 - absOffset * 0.04),
                   filter: isActive ? "none" : `brightness(${0.72 - absOffset * 0.08}) blur(${absOffset > 1 ? 0.4 : 0}px)`,
                 }}
               >

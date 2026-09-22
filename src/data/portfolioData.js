@@ -242,7 +242,10 @@ export const organizations = [
     title: "Volunteer - Sehari Mengabdi by SISI Indonesia (2024)",
     image: "/images/certifications/sisi-volunteer-certificate.png"
   },
-  { title: "Volunteer - Yayasan Kanker Indonesia" },
+  {
+    title: "Committee - Youth Harmony Workshop Art & Craft at Yayasan Kanker Indonesia (2024)",
+    image: "/images/certifications/youth-harmony-workshop-certificate.png"
+  },
   { title: "Team Leader - Buzzter.id (Achieved 60-120% monthly profit margin)" }
 ];
 
