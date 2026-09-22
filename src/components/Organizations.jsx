@@ -23,9 +23,9 @@ export default function Organizations({ embedded = false }) {
 
   const content = (
     <div className="grid gap-5 lg:grid-cols-2 lg:items-center">
-      <div className="volunteer-card rounded-lg border border-pink-200/70 bg-[#f8dfdc]/95 p-3 text-darkArmy shadow-soft sm:p-4">
+      <div className="volunteer-card rounded-lg border border-pink-200/70 bg-gradient-to-br from-[#ffdce9] via-[#f7e8ef] to-[#cceeff] p-3 text-darkArmy shadow-soft sm:p-4">
         <div className="grid gap-3 sm:grid-cols-2 sm:auto-rows-[15rem]">
-          <div className="flex min-h-[13rem] flex-col justify-center rounded-md bg-[#fff6eb]/80 p-4 sm:min-h-0">
+          <div className="flex min-h-[13rem] flex-col justify-center rounded-md bg-white/58 p-4 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.45)] sm:min-h-0">
             <div className="flex items-start gap-3">
               <HeartHandshake className="mt-1 h-7 w-7 shrink-0" />
               <div>
@@ -38,7 +38,7 @@ export default function Organizations({ embedded = false }) {
             </blockquote>
           </div>
           {volunteerMoments.map((moment) => (
-            <figure key={moment.title} className="relative min-h-[13rem] overflow-hidden rounded-md bg-[#fff6eb]/75 sm:min-h-0">
+            <figure key={moment.title} className="relative min-h-[13rem] overflow-hidden rounded-md bg-white/60 sm:min-h-0">
               <img src={moment.image} alt={moment.title} className="h-full w-full object-cover" />
               <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-darkArmy/95 via-darkArmy/70 to-transparent px-3 pb-3 pt-12 text-xs font-bold leading-4 text-offWhite">
                 {moment.title}
@@ -87,7 +87,7 @@ export default function Organizations({ embedded = false }) {
                       ))}
                     </div>
                   ) : item.image ? (
-                    <img src={item.image} alt={item.title} className="h-full w-full rounded-md object-contain" />
+                    <img src={item.image} alt={item.title} className={`h-full w-full rounded-md object-contain ${item.tone === "grayscale" ? "grayscale" : ""}`} />
                   ) : (
                     <img
                       src={volunteerMoments[0].image}

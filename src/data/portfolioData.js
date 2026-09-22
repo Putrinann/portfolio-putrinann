@@ -112,10 +112,11 @@ export const projects = [
     liveUrl: "https://bimbi-kindergarten.vercel.app/",
     ctaLabel: "Visit",
     images: [
+      "/images/projects/bimbi-material-history.png",
+      "/images/projects/bimbi-online-report.png",
       "/images/projects/bimbi-report.png",
       "/images/projects/bimbi-landing.png",
       "/images/projects/bimbi-parent-journal.png",
-      "/images/projects/bimbi-material-history.png",
       "/images/projects/bimbi-teacher-dashboard.png"
     ],
     description:
@@ -177,6 +178,12 @@ export const projects = [
     title: "Shoe Revenue Dashboard",
     partner: "Meilan Store",
     images: [
+      "/images/projects/meilan-dashboard-censored.png",
+      "/images/projects/meilan-order-search.png",
+      "/images/projects/meilan-current-cart.png",
+      "/images/projects/meilan-invoice.png",
+      "/images/projects/meilan-transaction-history.png",
+      "/images/projects/meilan-products.png",
       "/images/projects/shoe-revenue-dashboard.svg",
       "/images/projects/shoe-revenue-dashboard-proof-2.svg"
     ],
@@ -256,10 +263,10 @@ export const organizations = [
     title: "PR External Committee - Computing Sport Games Olympiad (2025)",
     image: "/images/certifications/csgo-pr-external-certificate.jpeg"
   },
-  { title: "Multimedia and Design - Investment Club Area 3" },
   {
     title: "Team Leader - Buzzter.id Beverages Business",
-    image: "/images/impact/buzzter-moments.png"
+    image: "/images/impact/buzzter-moments.png",
+    tone: "grayscale"
   },
   { title: "Treasurer - President University Computer and Technology Enthusiast Club" }
 ];
