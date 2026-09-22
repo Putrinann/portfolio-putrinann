@@ -13,21 +13,21 @@ export default function About() {
     <Section id="about" eyebrow="About" title="A little more about me.">
       <div className="grid gap-5 lg:grid-cols-[300px_minmax(0,1fr)] lg:items-start">
         <div className="relative mx-auto flex w-full max-w-[300px] flex-col items-center">
-          <div className="relative w-full overflow-hidden rounded-lg bg-[#1e221f] p-5 shadow-soft">
+          <div className="relative w-full overflow-hidden rounded-lg bg-[#1e221f] p-4 shadow-soft">
             <div className="absolute inset-0 opacity-70">
               <div className="absolute -right-16 top-8 h-52 w-80 -rotate-45 rounded-[50%] border border-electric/35" />
               <div className="absolute -left-24 top-20 h-48 w-80 rotate-12 rounded-[50%] border border-pastel/28" />
               <div className="absolute right-6 top-12 h-64 w-px rotate-[-42deg] bg-electric/30" />
               <div className="absolute left-8 top-20 h-72 w-px rotate-[40deg] bg-pastel/25" />
             </div>
-            <div className="relative mt-4 overflow-hidden rounded-md border border-offWhite/10 bg-darkArmy">
+            <div className="relative overflow-hidden rounded-md border border-offWhite/10 bg-darkArmy">
               <img
                 src="/images/profile/putri-red-background.jpeg"
                 alt="Putri Nurul Annisa formal portrait"
                 className="h-[330px] w-full object-cover object-top opacity-95"
               />
             </div>
-            <div className="relative mt-6 border-t border-electric/25 pt-4">
+            <div className="relative mt-4 border-t border-electric/25 pt-4">
               <div className="mb-3 flex justify-between text-[0.48rem] font-black uppercase tracking-[0.16em] text-electric/70">
                 <span>Portfolio</span>
                 <span>Information Systems</span>

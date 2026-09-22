@@ -1,11 +1,19 @@
+import { useState } from "react";
 import Section from "./Section.jsx";
 import Tag from "./Tag.jsx";
 import { certifications } from "../data/portfolioData.js";
 
+const INITIAL_CERTIFICATE_COUNT = 10;
+
 function CertificationsContent() {
+  const [showAll, setShowAll] = useState(false);
+  const visibleCertificates = showAll ? certifications : certifications.slice(0, INITIAL_CERTIFICATE_COUNT);
+  const hasMore = certifications.length > INITIAL_CERTIFICATE_COUNT;
+
   return (
-    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-        {certifications.map((certificate) => (
+    <div>
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        {visibleCertificates.map((certificate) => (
           <article key={certificate.title} className="tilt-card overflow-hidden rounded-lg border border-offWhite/10 bg-army/70 shadow-soft">
             <div className="aspect-[4/3] bg-offWhite/95 p-1.5">
               <img src={certificate.image} alt={`${certificate.title} certificate`} className="h-full w-full object-contain" />
@@ -18,6 +26,18 @@ function CertificationsContent() {
           </article>
         ))}
       </div>
+      {hasMore && (
+        <div className="mt-5 flex justify-center">
+          <button
+            type="button"
+            onClick={() => setShowAll((value) => !value)}
+            className="rounded-full border border-electric/40 bg-electric px-5 py-2 text-xs font-black uppercase tracking-[0.12em] text-darkArmy transition hover:bg-pastel"
+          >
+            {showAll ? "Show Less" : "View More"}
+          </button>
+        </div>
+      )}
+    </div>
   );
 }
 

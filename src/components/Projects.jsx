@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight, ArrowUpRight, Sparkles } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { useState } from "react";
 import Certifications from "./Certifications.jsx";
 import Section from "./Section.jsx";
@@ -70,12 +70,9 @@ function ProjectCard({ project }) {
               rel="noreferrer"
               className="inline-flex items-center gap-1 rounded-full bg-electric px-3 py-1 text-[0.68rem] font-black uppercase tracking-[0.08em] text-darkArmy transition hover:bg-pastel"
             >
-              <Sparkles size={13} />
+              <ArrowUpRight size={13} />
               Try It
-            </a>
-          ) : (
-            <ArrowUpRight className="h-4 w-4 text-electric" />
-          )}
+            </a>) : null}
         </div>
         <h3 className="text-lg font-semibold leading-6 text-offWhite">{project.title}</h3>
         <p className="mt-1 text-xs font-semibold leading-5 text-electric">{project.partner}</p>

@@ -8,6 +8,7 @@ import {
   Linkedin,
   Mail,
   MessagesSquare,
+  Instagram,
   Network,
   PartyPopper,
   PenLine,
@@ -324,9 +325,10 @@ export const toolkit = [
 
 export const contactLinks = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/putri-nurul-annisa", icon: Linkedin },
-  { label: "GitHub", href: "https://github.com/Putrinann", icon: Github },
+  { label: "GitHub", href: "https://github.com/putrinann", icon: Github },
   { label: "Email", href: "mailto:putrinannisa04@gmail.com?subject=Portfolio%20Inquiry", icon: Mail },
-  { label: "WhatsApp", href: "https://wa.me/6281522555426", icon: MessagesSquare }
+  { label: "WhatsApp", href: "https://wa.me/6281522555426", icon: MessagesSquare },
+  { label: "Instagram", href: "https://www.instagram.com/putrinann_", icon: Instagram }
 ];
 
 export const heroSignals = [
