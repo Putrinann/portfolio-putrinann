@@ -91,6 +91,7 @@ export const projects = [
     eyebrow: "Project 01",
     title: "Vanilla Booth",
     partner: "Virtual Photobooth Web App",
+    liveUrl: "https://vanilla-virtualbooth.vercel.app/",
     images: [
       "/images/projects/vanilla-booth-empty.png",
       "/images/projects/vanilla-booth-upload.png",
