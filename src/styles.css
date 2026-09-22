@@ -150,7 +150,7 @@ img {
 }
 
 .portfolio-shell.light .aurora-canvas {
-  opacity: 0.42;
+  opacity: 0.72;
   mix-blend-mode: multiply;
 }
 
@@ -161,7 +161,7 @@ img {
 }
 
 .portfolio-shell.light [class*="bg-darkArmy"] {
-  background-color: rgba(255, 250, 245, 0.88) !important;
+  background-color: rgba(255, 244, 248, 0.9) !important;
 }
 
 .portfolio-shell.light [class*="bg-army"] {
@@ -173,7 +173,7 @@ img {
 }
 
 .portfolio-shell.light [class*="border-offWhite"] {
-  border-color: rgba(96, 54, 69, 0.13) !important;
+  border-color: rgba(216, 93, 135, 0.18) !important;
 }
 
 .portfolio-shell.light [class*="bg-pastel"] {
@@ -187,9 +187,20 @@ img {
 .portfolio-shell.light [class*="border-pastel"] {
   border-color: rgba(216, 93, 135, 0.42) !important;
 }
+.portfolio-shell.light [class*="bg-electric"] {
+  background-color: #d85d87 !important;
+}
+
+.portfolio-shell.light [class*="text-electric"] {
+  color: #c94f84 !important;
+}
+
+.portfolio-shell.light [class*="border-electric"] {
+  border-color: rgba(216, 93, 135, 0.48) !important;
+}
 
 .portfolio-shell.light [class*="bg-offWhite"] {
-  background-color: rgba(250, 232, 196, 0.72) !important;
+  background-color: rgba(255, 229, 239, 0.72) !important;
 }
 
 .portfolio-shell.light [class*="shadow-soft"] {
@@ -197,13 +208,13 @@ img {
 }
 
 .portfolio-shell.light nav {
-  background-color: rgba(255, 250, 245, 0.88) !important;
+  background-color: rgba(255, 244, 248, 0.9) !important;
   border-color: rgba(216, 93, 135, 0.22) !important;
 }
 
 .portfolio-shell.light .tilt-card {
-  background-color: rgba(255, 255, 255, 0.58) !important;
-  border-color: rgba(96, 54, 69, 0.13) !important;
+  background-color: rgba(255, 235, 243, 0.62) !important;
+  border-color: rgba(216, 93, 135, 0.18) !important;
   backdrop-filter: blur(18px) saturate(1.18);
 }
 
@@ -222,7 +233,7 @@ img {
 }
 
 .portfolio-shell.light .experience-card {
-  background-color: rgba(250, 232, 196, 0.72) !important;
+  background-color: rgba(255, 229, 239, 0.72) !important;
   border-color: rgba(184, 61, 114, 0.2) !important;
 }
 
