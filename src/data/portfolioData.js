@@ -106,6 +106,21 @@ export const projects = [
   },
   {
     eyebrow: "Project 02",
+    title: "BIMBI",
+    partner: "Kindergarten Activity & Habit Tracker",
+    images: [
+      "/images/projects/bimbi-landing.png",
+      "/images/projects/bimbi-parent-journal.png",
+      "/images/projects/bimbi-material-history.png",
+      "/images/projects/bimbi-report.png",
+      "/images/projects/bimbi-teacher-dashboard.png"
+    ],
+    description:
+      "A full-stack kindergarten platform that connects teachers and parents through role-based portals for daily habit and prayer tracking, 1-3 photo activity submissions, teacher star evaluations, learning-material history, remote-class links, and student biodata management secured with Supabase Row-Level Security.",
+    tags: ["React.js", "Tailwind CSS", "Supabase", "PostgreSQL", "Auth", "Storage", "Role-Based Access"]
+  },
+  {
+    eyebrow: "Project 03",
     title: "Warehouse Digitalization System",
     partner: "PT OMRON MANUFACTURING OF INDONESIA",
     images: [
@@ -125,7 +140,7 @@ export const projects = [
     tags: ["React", "Node.js", "SQL Server", "REST API", "System Testing", "User Training"]
   },
   {
-    eyebrow: "Project 03",
+    eyebrow: "Project 04",
     title: "Plant Cycle Time Dashboard",
     partner: "PT Kalbio Global Medika / Kalbe",
     images: [
@@ -141,7 +156,7 @@ export const projects = [
     tags: ["Python", "PostgreSQL", "Dashboard", "Process Analytics"]
   },
   {
-    eyebrow: "Project 04",
+    eyebrow: "Project 05",
     title: "STUDIVY",
     partner: "Student Performance Prediction Dashboard",
     images: [
@@ -155,7 +170,7 @@ export const projects = [
     tags: ["Django", "Scikit-Learn", "PostgreSQL", "Chart.js", "Machine Learning"]
   },
   {
-    eyebrow: "Project 05",
+    eyebrow: "Project 06",
     title: "Shoe Revenue Dashboard",
     partner: "Meilan Store",
     images: [
