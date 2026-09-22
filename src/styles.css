@@ -141,12 +141,12 @@ img {
 }
 
 .portfolio-shell.light {
-  color: #1a241f;
+  color: #31212a;
   background:
-    radial-gradient(circle at 16% 8%, rgba(163, 230, 53, 0.2), transparent 22rem),
-    radial-gradient(circle at 88% 20%, rgba(163, 230, 53, 0.28), transparent 24rem),
-    radial-gradient(circle at 52% 70%, rgba(253, 243, 184, 0.55), transparent 28rem),
-    #fff9df !important;
+    radial-gradient(circle at 16% 8%, rgba(255, 182, 205, 0.42), transparent 22rem),
+    radial-gradient(circle at 88% 20%, rgba(255, 231, 238, 0.7), transparent 24rem),
+    radial-gradient(circle at 52% 70%, rgba(250, 232, 196, 0.7), transparent 28rem),
+    #fffaf5 !important;
 }
 
 .portfolio-shell.light .aurora-canvas {
@@ -156,138 +156,138 @@ img {
 
 .portfolio-shell.light .noise {
   opacity: 0.04;
-  background-image: linear-gradient(rgba(26, 36, 31, 0.18) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(26, 36, 31, 0.18) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(96, 54, 69, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(96, 54, 69, 0.15) 1px, transparent 1px);
 }
 
 .portfolio-shell.light [class*="bg-darkArmy"] {
-  background-color: rgba(255, 249, 223, 0.9) !important;
+  background-color: rgba(255, 250, 245, 0.88) !important;
 }
 
 .portfolio-shell.light [class*="bg-army"] {
-  background-color: rgba(253, 243, 184, 0.58) !important;
+  background-color: rgba(250, 232, 196, 0.58) !important;
 }
 
 .portfolio-shell.light [class*="text-offWhite"] {
-  color: rgba(26, 36, 31, 0.9) !important;
+  color: rgba(49, 33, 42, 0.9) !important;
 }
 
 .portfolio-shell.light [class*="border-offWhite"] {
-  border-color: rgba(26, 36, 31, 0.12) !important;
+  border-color: rgba(96, 54, 69, 0.13) !important;
 }
 
 .portfolio-shell.light [class*="bg-pastel"] {
-  background-color: rgba(163, 230, 53, 0.2) !important;
+  background-color: rgba(255, 182, 205, 0.28) !important;
 }
 
 .portfolio-shell.light [class*="text-pastel"] {
-  color: #4f7c0f !important;
+  color: #c94f84 !important;
 }
 
 .portfolio-shell.light [class*="border-pastel"] {
-  border-color: rgba(163, 230, 53, 0.6) !important;
+  border-color: rgba(216, 93, 135, 0.42) !important;
 }
 
 .portfolio-shell.light [class*="bg-offWhite"] {
-  background-color: rgba(253, 243, 184, 0.72) !important;
+  background-color: rgba(250, 232, 196, 0.72) !important;
 }
 
 .portfolio-shell.light [class*="shadow-soft"] {
-  box-shadow: 0 22px 58px rgba(26, 36, 31, 0.12) !important;
+  box-shadow: 0 22px 58px rgba(96, 54, 69, 0.13) !important;
 }
 
 .portfolio-shell.light nav {
-  background-color: rgba(255, 249, 223, 0.9) !important;
-  border-color: rgba(122, 160, 26, 0.22) !important;
+  background-color: rgba(255, 250, 245, 0.88) !important;
+  border-color: rgba(216, 93, 135, 0.22) !important;
 }
 
 .portfolio-shell.light .tilt-card {
-  background-color: rgba(255, 255, 255, 0.34) !important;
-  border-color: rgba(26, 36, 31, 0.12) !important;
+  background-color: rgba(255, 255, 255, 0.58) !important;
+  border-color: rgba(96, 54, 69, 0.13) !important;
   backdrop-filter: blur(18px) saturate(1.18);
 }
 
 .portfolio-shell.light .tilt-card:hover {
-  box-shadow: 0 24px 54px rgba(74, 93, 78, 0.16);
+  box-shadow: 0 24px 54px rgba(184, 61, 114, 0.16);
 }
 
 .portfolio-shell.light .experience-card-header {
-  background-color: #4f7c0f !important;
-  color: #fff9df !important;
-  border-color: rgba(163, 230, 53, 0.22) !important;
+  background-color: #c94f84 !important;
+  color: #fffaf5 !important;
+  border-color: rgba(216, 93, 135, 0.22) !important;
 }
 
 .portfolio-shell.light .experience-card-header svg {
-  color: #a3e635;
+  color: #ffd6e4;
 }
 
 .portfolio-shell.light .experience-card {
-  background-color: rgba(9, 39, 4, 0.72) !important;
-  border-color: rgba(79, 124, 15, 0.22) !important;
+  background-color: rgba(250, 232, 196, 0.72) !important;
+  border-color: rgba(184, 61, 114, 0.2) !important;
 }
 
 .portfolio-shell.light .experience-card h3{
-  color: #022703 !important;
+  color: #5b2540 !important;
 }
 
 
 .portfolio-shell.light .experience-card p,
 .portfolio-shell.light .experience-card li {
-  color: #b7b15b !important;
+  color: rgba(49, 33, 42, 0.72) !important;
 }
 
 
 
 .portfolio-shell.light .hero-work-button {
-  background-color: #4f7c0f !important;
-  color: #fff9df !important;
+  background-color: #c94f84 !important;
+  color: #fffaf5 !important;
 }
 
 .portfolio-shell.light .hero-work-button:hover {
-  background-color: #85d023 !important;
+  background-color: #a83d6d !important;
 }
 
 .portfolio-shell.light .experience-period {
-  color: #92ea18 !important;
+  color: #c94f84 !important;
   font-weight: 800;
 }
 
 .portfolio-shell.light .experience-card [class*="bg-pastel"] {
-  background-color: rgba(223, 231, 74, 0.13) !important;
+  background-color: rgba(255, 182, 205, 0.24) !important;
 }
 
 .portfolio-shell.light .experience-card [class*="text-pastel"] {
-  color: #183c0a !important;
+  color: #7a2a4f !important;
 }
 
 .portfolio-shell.light .experience-card-header p {
-  color: #f6f8ed !important;
+  color: #fffaf5 !important;
 }
 
 .portfolio-shell.light .impact-carousel > [class*="from-darkArmy"] {
-  --tw-gradient-from: #fff9df var(--tw-gradient-from-position) !important;
+  --tw-gradient-from: #fffaf5 var(--tw-gradient-from-position) !important;
 }
 
 .portfolio-shell.light .volunteer-card {
   background-color: rgba(255, 255, 255, 0.76) !important;
-  border: 1px solid rgba(26, 36, 31, 0.08);
-  box-shadow: 0 20px 60px rgba(26, 36, 31, 0.1);
+  border: 1px solid rgba(216, 93, 135, 0.1);
+  box-shadow: 0 20px 60px rgba(96, 54, 69, 0.1);
 }
 
 .portfolio-shell.light .impact-slide {
-  background-color: rgba(26, 77, 45, 0.8) !important;
+  background-color: rgba(91, 37, 64, 0.82) !important;
   backdrop-filter: blur(18px) saturate(1.18);
 }
 
 .portfolio-shell.light .impact-slide [class*="bg-darkArmy"] {
-  background-color: rgba(26, 77, 45, 0.94) !important;
+  background-color: rgba(91, 37, 64, 0.94) !important;
 }
 
 .portfolio-shell.light .impact-slide h3,
 .portfolio-shell.light .impact-slide [class*="text-offWhite"] {
-  color: #fff9df !important;
+  color: #fffaf5 !important;
 }
 
 .portfolio-shell.light footer {
-  color: rgba(26, 36, 31, 0.55) !important;
+  color: rgba(49, 33, 42, 0.55) !important;
 }
