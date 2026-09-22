@@ -203,7 +203,7 @@ export const bioCards = [
 
 export const volunteerMoments = [
   {
-    title: "President University Fashion Week Moments",
+    title: "Event Committee Moments",
     image: "/images/impact/volunteer-committee-moments.png"
   },
   {
@@ -217,14 +217,10 @@ export const volunteerMoments = [
 ];
 
 export const organizations = [
-  { title: "Event Organizer Student Awarding Night - BEM President University (2024)" },
   {
-    title: "PR Internal Committee - President University Fashion Week (2024)",
-    image: "/images/certifications/pufw-pr-internal-certificate.png"
+    title: "Event Organizer - Student Awarding Night by BEM President University (2024)",
+    image: "/images/certifications/san-event-organizer-certificate.png"
   },
-  { title: "PR External Committee - Computing Sport Games Olympiad (2025)" },
-  { title: "Treasurer - President University Computer and Technology Enthusiast Club" },
-  { title: "Multimedia and Design - Investment Club Area 3" },
   {
     title: "Volunteer - Cemar Berbagi at Yayasan Yatim Darul Aitam (2024)",
     image: "/images/certifications/cemar-berbagi-volunteer.png"
@@ -243,9 +239,29 @@ export const organizations = [
   },
   {
     title: "Committee - Youth Harmony Workshop Art & Craft at Yayasan Kanker Indonesia (2024)",
-    image: "/images/certifications/youth-harmony-workshop-certificate.png"
+    images: [
+      "/images/certifications/youth-harmony-workshop-certificate.png",
+      "/images/impact/yki-art-craft-moments.png"
+    ]
   },
-  { title: "Team Leader - Buzzter.id Beverages Business" }
+  {
+    title: "Committee - Investment Area 3 by Investment Club President University (2025)",
+    image: "/images/certifications/investment-area-committee-certificate.png"
+  },
+  {
+    title: "PR Internal Committee - President University Fashion Week (2024)",
+    image: "/images/certifications/pufw-pr-internal-certificate.png"
+  },
+  {
+    title: "PR External Committee - Computing Sport Games Olympiad (2025)",
+    image: "/images/certifications/csgo-pr-external-certificate.jpeg"
+  },
+  { title: "Multimedia and Design - Investment Club Area 3" },
+  {
+    title: "Team Leader - Buzzter.id Beverages Business",
+    image: "/images/impact/buzzter-moments.png"
+  },
+  { title: "Treasurer - President University Computer and Technology Enthusiast Club" }
 ];
 
 export const certifications = [

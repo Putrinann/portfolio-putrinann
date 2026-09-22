@@ -80,12 +80,20 @@ export default function Organizations({ embedded = false }) {
                 }}
               >
                 <div className="flex h-44 items-center justify-center bg-offWhite/95 p-2 sm:h-48">
-                  {item.image ? (
+                  {item.images ? (
+                    <div className="grid h-full w-full grid-cols-2 gap-2">
+                      {item.images.map((image) => (
+                        <img key={image} src={image} alt={item.title} className="h-full w-full rounded-md object-cover" />
+                      ))}
+                    </div>
+                  ) : item.image ? (
                     <img src={item.image} alt={item.title} className="h-full w-full rounded-md object-contain" />
                   ) : (
-                    <div className="rounded-full border border-darkArmy/10 bg-pastel/60 px-4 py-2 text-[0.65rem] font-black uppercase tracking-[0.16em] text-darkArmy">
-                      Photo soon
-                    </div>
+                    <img
+                      src={volunteerMoments[0].image}
+                      alt="Documentation moments"
+                      className="h-full w-full rounded-md object-cover grayscale"
+                    />
                   )}
                 </div>
                 <div className="flex min-h-36 flex-1 flex-col justify-between bg-darkArmy/92 p-4">
