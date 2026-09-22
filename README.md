@@ -31,7 +31,6 @@ Image placeholders are stored in:
 public/images/profile
 public/images/projects
 public/images/certifications
-public/images/icons
 ```
 
 Keep the same filenames for the fastest replacement, or update the `image` paths in `src/data/portfolioData.js`.
@@ -39,8 +38,7 @@ Keep the same filenames for the fastest replacement, or update the `image` paths
 Current profile assets:
 
 ```text
-public/images/profile/putri-standing-cutout.png
-public/images/profile/putri-standing-grey.jpeg
+public/images/profile/putri-standing-heels-cutout.png
 public/images/profile/putri-red-background.jpeg
 ```
 
