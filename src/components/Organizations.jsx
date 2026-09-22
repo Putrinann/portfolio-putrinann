@@ -23,25 +23,28 @@ export default function Organizations({ embedded = false }) {
 
   const content = (
     <div className="grid gap-5 lg:grid-cols-2 lg:items-center">
-      <div className="volunteer-card rounded-lg bg-offWhite p-4 text-darkArmy">
-        <div className="mb-4 flex items-center gap-3">
-          <HeartHandshake className="h-7 w-7" />
+      <div className="volunteer-card rounded-lg border border-pastel/30 bg-[#f8dfdc]/90 p-4 text-darkArmy shadow-soft">
+        <div className="mb-4 flex items-start gap-3">
+          <HeartHandshake className="mt-1 h-7 w-7" />
           <div>
             <p className="text-[0.65rem] font-black uppercase tracking-[0.18em] text-darkArmy/55">Volunteer</p>
             <h3 className="text-xl font-black leading-6">Moments</h3>
+            <blockquote className="mt-2 max-w-md text-xs font-semibold leading-5 text-darkArmy/62">
+              "Volunteering has taught me to lead with empathy and act with purpose."
+            </blockquote>
           </div>
         </div>
-        <div className="grid h-[360px] grid-cols-2 gap-3 overflow-hidden sm:h-[390px]">
-          <figure className="relative overflow-hidden rounded-md bg-darkArmy/5">
-            <img src={volunteerMoments[0].image} alt={volunteerMoments[0].title} className="h-full w-full object-cover" />
+        <div className="grid h-[330px] grid-cols-2 gap-3 overflow-hidden sm:h-[350px]">
+          <figure className="relative overflow-hidden rounded-md bg-[#fff6eb]/70">
+            <img src={volunteerMoments[0].image} alt={volunteerMoments[0].title} className="h-full w-full object-contain" />
             <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-darkArmy/80 to-transparent p-3 text-xs font-bold text-offWhite">
               {volunteerMoments[0].title}
             </figcaption>
           </figure>
           <div className="grid gap-3">
             {volunteerMoments.slice(1).map((moment) => (
-              <figure key={moment.title} className="relative overflow-hidden rounded-md bg-darkArmy/5">
-                <img src={moment.image} alt={moment.title} className="h-full w-full object-cover" />
+              <figure key={moment.title} className="relative overflow-hidden rounded-md bg-[#fff6eb]/70">
+                <img src={moment.image} alt={moment.title} className="h-full w-full object-contain" />
                 <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-darkArmy/80 to-transparent p-3 text-xs font-bold text-offWhite">
                   {moment.title}
                 </figcaption>

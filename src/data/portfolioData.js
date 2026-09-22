@@ -203,16 +203,16 @@ export const bioCards = [
 
 export const volunteerMoments = [
   {
+    title: "President University Fashion Week Moments",
+    image: "/images/impact/volunteer-committee-moments.png"
+  },
+  {
     title: "Community & Volunteer Highlights",
     image: "/images/impact/volunteer-moments-collage.png"
   },
   {
     title: "Creative Content & Committee Work",
     image: "/images/impact/volunteer-content-moments.png"
-  },
-  {
-    title: "President University Fashion Week Moments",
-    image: "/images/impact/volunteer-committee-moments.png"
   }
 ];
 
