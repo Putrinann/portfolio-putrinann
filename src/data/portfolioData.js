@@ -202,14 +202,17 @@ export const bioCards = [
 ];
 
 export const organizations = [
-  "Event Organizer Student Awarding Night - BEM President University (2024)",
-  "PR Internal Committee - President University Fashion Week (2024)",
-  "PR External Committee - Computing Sport Games Olympiad (2025)",
-  "Treasurer - President University Computer and Technology Enthusiast Club",
-  "Multimedia and Design - Investment Club Area 3",
-  "Founder - Namazone",
-  "Volunteer - ImpactED 100 & Yayasan Kanker Indonesia",
-  "Team Leader - Buzzter.id (Achieved 60-120% monthly profit margin)"
+  { title: "Event Organizer Student Awarding Night - BEM President University (2024)" },
+  {
+    title: "PR Internal Committee - President University Fashion Week (2024)",
+    image: "/images/certifications/pufw-pr-internal-certificate.png"
+  },
+  { title: "PR External Committee - Computing Sport Games Olympiad (2025)" },
+  { title: "Treasurer - President University Computer and Technology Enthusiast Club" },
+  { title: "Multimedia and Design - Investment Club Area 3" },
+  { title: "Founder - Namazone" },
+  { title: "Volunteer - ImpactED 100 & Yayasan Kanker Indonesia" },
+  { title: "Team Leader - Buzzter.id (Achieved 60-120% monthly profit margin)" }
 ];
 
 export const certifications = [

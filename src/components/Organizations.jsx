@@ -51,7 +51,7 @@ export default function Organizations({ embedded = false }) {
 
             return (
               <article
-                key={item}
+                key={item.title || item}
                 className={`impact-slide absolute left-1/2 top-3 flex w-[20rem] -translate-x-1/2 flex-col overflow-hidden rounded-lg transition-all duration-500 ease-out sm:w-[23rem] ${
                   isActive ? "bg-darkArmy shadow-[0_28px_90px_rgba(163,230,53,0.18)]" : "bg-darkArmy/70"
                 } ${hidden ? "pointer-events-none opacity-0" : ""}`}
@@ -62,14 +62,18 @@ export default function Organizations({ embedded = false }) {
                   filter: isActive ? "none" : `brightness(${0.72 - absOffset * 0.08}) blur(${absOffset > 1 ? 0.4 : 0}px)`,
                 }}
               >
-                <div className="flex h-44 items-center justify-center bg-offWhite/95 p-4 sm:h-48">
-                  <div className="rounded-full border border-darkArmy/10 bg-pastel/60 px-4 py-2 text-[0.65rem] font-black uppercase tracking-[0.16em] text-darkArmy">
-                    Photo soon
-                  </div>
+                <div className="flex h-44 items-center justify-center bg-offWhite/95 p-2 sm:h-48">
+                  {item.image ? (
+                    <img src={item.image} alt={item.title} className="h-full w-full rounded-md object-contain" />
+                  ) : (
+                    <div className="rounded-full border border-darkArmy/10 bg-pastel/60 px-4 py-2 text-[0.65rem] font-black uppercase tracking-[0.16em] text-darkArmy">
+                      Photo soon
+                    </div>
+                  )}
                 </div>
                 <div className="flex min-h-36 flex-1 flex-col justify-between bg-darkArmy/92 p-4">
                   <p className="text-[0.65rem] font-black uppercase tracking-[0.16em] text-pastel">Impact 0{index + 1}</p>
-                  <h3 className="mt-3 text-base font-semibold leading-6 text-offWhite">{item}</h3>
+                  <h3 className="mt-3 text-base font-semibold leading-6 text-offWhite">{item.title || item}</h3>
                 </div>
               </article>
             );
@@ -88,7 +92,7 @@ export default function Organizations({ embedded = false }) {
           <div className="flex gap-2">
             {organizations.map((item, index) => (
               <button
-                key={item}
+                key={item.title || item}
                 type="button"
                 aria-label={`Show impact item ${index + 1}`}
                 onClick={() => setActiveIndex(index)}
