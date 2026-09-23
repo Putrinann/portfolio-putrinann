@@ -21,48 +21,33 @@ export default function Organizations({ embedded = false }) {
     setDragStart(null);
   };
 
-  const miniMoments = [moments[2], moments[6], moments[0], moments[4], moments[1], moments[8], moments[10], moments[5]].filter(Boolean);
-  const momentTileClasses = [
-    "row-span-2 min-h-[11rem]",
-    "min-h-[8rem]",
-    "min-h-[9rem]",
-    "row-span-2 min-h-[12rem]",
-    "min-h-[8rem]",
-    "min-h-[10rem]",
-    "min-h-[8rem]",
-    "row-span-2 min-h-[11rem]"
-  ];
-
   const content = (
     <div className="grid gap-5 lg:grid-cols-2 lg:items-center">
       <div className="volunteer-card rounded-lg border border-pink-200/70 bg-gradient-to-br from-[#ffdce9] via-[#f7e8ef] to-[#cceeff] p-3 text-darkArmy shadow-soft sm:p-4">
-        <div className="grid gap-3 md:grid-cols-[0.38fr_0.62fr]">
-          <div className="flex min-h-[10rem] flex-col justify-center rounded-md bg-white/58 p-4 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.45)] md:min-h-0">
-            <div className="flex items-start gap-3">
-              <HeartHandshake className="mt-1 h-7 w-7 shrink-0" />
-              <div>
-                <p className="text-[0.65rem] font-black uppercase tracking-[0.18em] text-darkArmy/55">Volunteer</p>
-                <h3 className="text-xl font-black leading-6">Moments</h3>
-              </div>
+        <div className="mb-3 max-w-sm rounded-md bg-white/58 p-4 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.45)]">
+          <div className="flex items-start gap-3">
+            <HeartHandshake className="mt-1 h-7 w-7 shrink-0" />
+            <div>
+              <p className="text-[0.65rem] font-black uppercase tracking-[0.18em] text-darkArmy/55">Volunteer</p>
+              <h3 className="text-xl font-black leading-6">Moments</h3>
             </div>
-            <blockquote className="mt-4 text-xs font-semibold leading-5 text-darkArmy/72">
-              "Volunteering has taught me to lead with empathy and act with purpose."
-            </blockquote>
           </div>
-          <div className="max-h-[28rem] overflow-y-auto pr-1">
-            <div className="grid auto-rows-[4.5rem] grid-cols-2 gap-2 sm:grid-cols-3">
-              {miniMoments.map((moment, index) => (
-                <figure
-                  key={moment.title}
-                  className={"relative overflow-hidden rounded-lg bg-white/60 " + momentTileClasses[index % momentTileClasses.length]}
-                >
-                  <img src={moment.image} alt={moment.title} className="h-full w-full object-cover" />
-                  <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-darkArmy/95 via-darkArmy/65 to-transparent px-2 pb-2 pt-10 text-[0.62rem] font-bold leading-3 text-offWhite">
+          <blockquote className="mt-3 text-xs font-semibold leading-5 text-darkArmy/72">
+            "Volunteering has taught me to lead with empathy and act with purpose."
+          </blockquote>
+        </div>
+        <div className="max-h-[30rem] overflow-y-auto pr-1">
+          <div className="columns-2 gap-2 sm:columns-3">
+            {moments.map((moment) => (
+              <figure key={moment.title} className="mb-2 break-inside-avoid overflow-hidden rounded-lg bg-white/60 shadow-sm">
+                <div className="relative">
+                  <img src={moment.image} alt={moment.title} className="w-full object-cover" />
+                  <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-darkArmy/95 via-darkArmy/60 to-transparent px-2 pb-2 pt-10 text-[0.62rem] font-bold leading-3 text-offWhite">
                     {moment.title}
                   </figcaption>
-                </figure>
-              ))}
-            </div>
+                </div>
+              </figure>
+            ))}
           </div>
         </div>
       </div>
