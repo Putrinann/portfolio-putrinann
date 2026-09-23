@@ -21,6 +21,9 @@ export default function Organizations({ embedded = false }) {
     setDragStart(null);
   };
 
+  const shuffledMoments = [moments[2], moments[0], moments[5], moments[8], moments[1], moments[10], moments[4], moments[6], moments[3], moments[9], moments[7]].filter(Boolean);
+  const pinterestHeights = ["h-48", "h-32", "h-64", "h-40", "h-56", "h-36", "h-72", "h-44", "h-60", "h-36", "h-52"];
+
   const content = (
     <div className="grid gap-5 lg:grid-cols-2 lg:items-center">
       <div className="volunteer-card rounded-lg border border-pink-200/70 bg-gradient-to-br from-[#ffdce9] via-[#f7e8ef] to-[#cceeff] p-3 text-darkArmy shadow-soft sm:p-4">
@@ -38,10 +41,10 @@ export default function Organizations({ embedded = false }) {
         </div>
         <div className="max-h-[30rem] overflow-y-auto pr-1">
           <div className="columns-2 gap-2 sm:columns-3">
-            {moments.map((moment) => (
+            {shuffledMoments.map((moment, index) => (
               <figure key={moment.title} className="mb-2 break-inside-avoid overflow-hidden rounded-lg bg-white/60 shadow-sm">
-                <div className="relative">
-                  <img src={moment.image} alt={moment.title} className="w-full object-cover" />
+                <div className={"relative " + pinterestHeights[index % pinterestHeights.length]}>
+                  <img src={moment.image} alt={moment.title} className="h-full w-full object-cover" />
                   <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-darkArmy/95 via-darkArmy/60 to-transparent px-2 pb-2 pt-10 text-[0.62rem] font-bold leading-3 text-offWhite">
                     {moment.title}
                   </figcaption>

@@ -1,4 +1,4 @@
-import { ArrowDownRight, Network } from "lucide-react";
+import { ArrowUpRight, Network } from "lucide-react";
 import Experience from "./Experience.jsx";
 import { awards, capabilities, contactLinks } from "../data/portfolioData.js";
 
@@ -40,14 +40,14 @@ export default function Hero({ setActiveSection }) {
               onClick={() => setActiveSection("projects")}
               className="hero-work-button inline-flex items-center justify-center gap-2 rounded-full bg-electric px-6 py-3 text-sm font-black text-darkArmy transition hover:bg-pastel"
             >
-              View My Work <ArrowDownRight size={18} />
+              View My Work <ArrowUpRight size={18} />
             </button>
             <button
               type="button"
-              onClick={() => setActiveSection("contact")}
+              onClick={() => setActiveSection("about")}
               className="inline-flex items-center justify-center gap-2 rounded-full border border-offWhite/15 px-6 py-3 text-sm font-bold text-offWhite transition hover:border-electric hover:text-electric"
             >
-              Let's Connect <ArrowDownRight size={17} />
+              Know more about me <ArrowUpRight size={17} />
             </button>
           </div>
         </div>
