@@ -5,7 +5,6 @@ import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
 import Projects from "./components/Projects.jsx";
 import Contact from "./components/Contact.jsx";
-import Footer from "./components/Footer.jsx";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("home");
@@ -29,10 +28,9 @@ export default function App() {
       <AuroraCanvas activeSection={activeSection} />
       <div className="noise" />
       <Navbar activeSection={activeSection} setActiveSection={setActiveSection} theme={theme} toggleTheme={toggleTheme} />
-      <main className="relative z-10 min-h-screen pt-24">
+      <main className="relative z-10 min-h-screen">
         {sections[activeSection]}
       </main>
-      <Footer />
     </div>
   );
 }

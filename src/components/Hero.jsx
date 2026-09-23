@@ -40,7 +40,7 @@ export default function Hero({ setActiveSection }) {
     <section
       ref={sectionRef}
       id="home"
-      className="hero-forest-section relative overflow-hidden px-5 pb-10 pt-6 sm:px-8 lg:px-12"
+      className="hero-forest-section relative overflow-hidden px-5 pb-10 pt-28 sm:px-8 sm:pt-32 lg:px-12"
       onPointerMove={handlePointerMove}
       onPointerLeave={resetParallax}
       style={{ "--parallax-x": 0, "--parallax-y": 0, "--scroll-y": 0 }}

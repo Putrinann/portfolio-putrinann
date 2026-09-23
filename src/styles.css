@@ -423,3 +423,107 @@ img {
 .portfolio-shell.light .hero-forest-section {
   background: linear-gradient(180deg, rgba(255, 250, 245, 0), rgba(255, 244, 248, 0.36) 88%, rgba(255, 250, 245, 0));
 }
+
+/* Seamless forest hero preview */
+.portfolio-shell {
+  background:
+    radial-gradient(circle at 16% 4%, rgba(163, 230, 53, 0.08), transparent 28rem),
+    radial-gradient(circle at 84% 12%, rgba(255, 182, 205, 0.08), transparent 30rem),
+    linear-gradient(180deg, #142018 0%, #1a241f 52%, #0b2a1b 84%, #071f14 100%) !important;
+}
+
+.portfolio-shell > main,
+.portfolio-shell > footer,
+header {
+  background: transparent !important;
+}
+
+header nav {
+  background-color: rgba(20, 32, 24, 0.72) !important;
+  box-shadow: none !important;
+}
+
+.hero-forest-section {
+  min-height: 100vh;
+  background: transparent !important;
+  border: 0;
+  box-shadow: none;
+}
+
+.hero-forest-layer,
+.hero-forest-vignette {
+  display: block;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-forest-layer {
+  z-index: 0;
+  background-image: url("/images/hero/forest.jpg");
+  background-size: cover;
+  background-position: center 42%;
+  will-change: transform, opacity;
+}
+
+.hero-forest-back {
+  opacity: 0.78;
+  filter: saturate(0.92) contrast(1.04) brightness(0.6);
+  transform: translate3d(calc(var(--parallax-x) * -18px), calc(var(--parallax-y) * -10px + var(--scroll-y) * 16px), 0) scale(1.035);
+  animation: none;
+  mask-image: linear-gradient(to bottom, transparent 0%, transparent 3.5rem, black 10rem, black calc(100% - 8rem), transparent 100%);
+}
+
+.hero-forest-mid,
+.hero-forest-front {
+  display: none;
+}
+
+.hero-forest-vignette {
+  z-index: 0;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(20, 32, 24, 0) 0%, rgba(20, 32, 24, 0.12) 10rem, rgba(20, 32, 24, 0.22) 58%, rgba(7, 31, 20, 1) 100%),
+    radial-gradient(circle at 22% 24%, rgba(163, 230, 53, 0.17), transparent 26rem),
+    radial-gradient(circle at 82% 24%, rgba(255, 182, 205, 0.1), transparent 28rem),
+    linear-gradient(90deg, rgba(20, 32, 24, 0.58), rgba(20, 32, 24, 0.22) 45%, rgba(20, 32, 24, 0.58));
+}
+
+footer {
+  background: linear-gradient(180deg, rgba(17, 28, 22, 0), rgba(17, 28, 22, 0.82)) !important;
+}
+
+.portfolio-shell.light {
+  background:
+    radial-gradient(circle at 16% 4%, rgba(255, 182, 205, 0.28), transparent 28rem),
+    radial-gradient(circle at 84% 12%, rgba(250, 232, 196, 0.34), transparent 30rem),
+    linear-gradient(180deg, #fffaf5 0%, #fff4f8 52%, #f4edf0 84%, #efe6e9 100%) !important;
+}
+
+.portfolio-shell.light header nav {
+  background-color: rgba(255, 244, 248, 0.72) !important;
+  box-shadow: none !important;
+}
+
+.portfolio-shell.light .hero-forest-back {
+  opacity: 0.28;
+  filter: saturate(0.7) contrast(0.96) brightness(1.14);
+}
+
+.portfolio-shell.light .hero-forest-vignette {
+  background:
+    linear-gradient(180deg, rgba(255, 250, 245, 0) 0%, rgba(255, 250, 245, 0.14) 11rem, rgba(255, 250, 245, 0.42) 64%, rgba(255, 250, 245, 0.84) 100%),
+    radial-gradient(circle at 22% 24%, rgba(255, 182, 205, 0.26), transparent 26rem),
+    radial-gradient(circle at 82% 24%, rgba(250, 232, 196, 0.34), transparent 28rem),
+    linear-gradient(90deg, rgba(255, 250, 245, 0.46), rgba(255, 250, 245, 0.12) 45%, rgba(255, 250, 245, 0.46));
+}
+
+/* Footer blend override */
+main {
+  background: linear-gradient(180deg, transparent 0%, transparent calc(100% - 10rem), rgba(7, 31, 20, 0.68) 100%) !important;
+}
+
+footer {
+  background: transparent !important;
+  box-shadow: none !important;
+}
