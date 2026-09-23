@@ -1,6 +1,5 @@
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { useState } from "react";
-import Certifications from "./Certifications.jsx";
 import Section from "./Section.jsx";
 import Tag from "./Tag.jsx";
 import Toolkit from "./Toolkit.jsx";
@@ -16,9 +15,6 @@ export default function Projects() {
       </div>
       <div className="mt-8">
         <Toolkit embedded />
-      </div>
-      <div className="mt-8">
-        <Certifications embedded />
       </div>
     </Section>
   );

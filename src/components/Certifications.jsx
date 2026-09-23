@@ -4,14 +4,43 @@ import Tag from "./Tag.jsx";
 import { certifications } from "../data/portfolioData.js";
 
 const INITIAL_CERTIFICATE_COUNT = 10;
+const tabs = [
+  { id: "learning", label: "Learning Data" },
+  { id: "leadership", label: "Leadership & Award" }
+];
+const learningIssuers = new Set(["AWS", "DQLab", "IBM"]);
 
 function CertificationsContent() {
+  const [activeTab, setActiveTab] = useState("learning");
   const [showAll, setShowAll] = useState(false);
-  const visibleCertificates = showAll ? certifications : certifications.slice(0, INITIAL_CERTIFICATE_COUNT);
-  const hasMore = certifications.length > INITIAL_CERTIFICATE_COUNT;
+  const filteredCertificates = certifications.filter((certificate) => {
+    const isLearning = learningIssuers.has(certificate.issuer);
+    return activeTab === "learning" ? isLearning : !isLearning;
+  });
+  const visibleCertificates = showAll ? filteredCertificates : filteredCertificates.slice(0, INITIAL_CERTIFICATE_COUNT);
+  const hasMore = filteredCertificates.length > INITIAL_CERTIFICATE_COUNT;
 
   return (
     <div>
+      <div className="mb-4 flex flex-wrap gap-2">
+        {tabs.map((tab) => (
+          <button
+            key={tab.id}
+            type="button"
+            onClick={() => {
+              setActiveTab(tab.id);
+              setShowAll(false);
+            }}
+            className={`rounded-full border px-4 py-2 text-[0.68rem] font-black uppercase tracking-[0.12em] transition ${
+              activeTab === tab.id
+                ? "border-electric bg-electric text-darkArmy"
+                : "border-offWhite/15 bg-army/60 text-offWhite hover:border-pastel hover:text-pastel"
+            }`}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         {visibleCertificates.map((certificate) => (
           <article key={certificate.title} className="tilt-card overflow-hidden rounded-lg border border-offWhite/10 bg-army/70 shadow-soft">

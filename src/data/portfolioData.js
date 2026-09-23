@@ -223,6 +223,53 @@ export const volunteerMoments = [
   }
 ];
 
+export const moments = [
+  {
+    title: "CHEC Award Moments",
+    image: "/images/moments/chec-award-moments.jpeg"
+  },
+  {
+    title: "Final Exam Project Presentation",
+    image: "/images/moments/kalbio-final-project.jpeg"
+  },
+  {
+    title: "Event Committee Moments",
+    image: "/images/moments/committee-san-pufw-moment.jpeg"
+  },
+  {
+    title: "Youth Harmony Art & Craft",
+    image: "/images/impact/yki-art-craft-moments.png"
+  },
+  {
+    title: "Volunteer Culture Session",
+    image: "/images/moments/sehari-mengabdi-moment.jpeg"
+  },
+  {
+    title: "Kind to the Planet",
+    image: "/images/moments/planet-volunteer-moment.jpeg"
+  },
+  {
+    title: "Graduation Day Friends",
+    image: "/images/moments/graduation-friends-collage-1.jpeg"
+  },
+  {
+    title: "Graduation Collage",
+    image: "/images/moments/graduation-friends-collage-2.jpeg"
+  },
+  {
+    title: "Community & Volunteer Highlights",
+    image: "/images/impact/volunteer-moments-collage.png"
+  },
+  {
+    title: "Creative Content & Committee Work",
+    image: "/images/impact/volunteer-content-moments.png"
+  },
+  {
+    title: "Buzzter.id Moments",
+    image: "/images/impact/buzzter-moments.png"
+  }
+];
+
 export const organizations = [
   {
     title: "Event Organizer - Student Awarding Night by BEM President University (2024)",
@@ -272,6 +319,11 @@ export const organizations = [
 ];
 
 export const certifications = [
+  {
+    title: "Third Winner - CHEC Award 2024",
+    issuer: "CHEC",
+    image: "/images/certifications/chec-award-2024-certificate.jpeg"
+  },
   {
     title: "Introduction to Data Analytics",
     issuer: "IBM",
