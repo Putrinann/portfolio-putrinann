@@ -327,16 +327,16 @@ img {
 }
 
 .hero-forest-back {
-  transform: translate3d(calc(var(--parallax-x) * -18px), calc(var(--parallax-y) * -12px), 0) scale(1.09);
-  opacity: 0.72;
-  filter: saturate(0.94) contrast(1.08) brightness(0.72);
+  transform: translate3d(calc(var(--parallax-x) * -42px), calc(var(--parallax-y) * -26px + var(--scroll-y) * 42px), 0) scale(1.16);
+  opacity: 0.86;
+  filter: saturate(1.02) contrast(1.12) brightness(0.62);
   animation: forestBreath 16s ease-in-out infinite alternate;
 }
 
 .hero-forest-mid {
   background-position: 50% 58%;
-  transform: translate3d(calc(var(--parallax-x) * 28px), calc(var(--parallax-y) * 18px), 0) scale(1.16);
-  opacity: 0.28;
+  transform: translate3d(calc(var(--parallax-x) * 72px), calc(var(--parallax-y) * 42px + var(--scroll-y) * -64px), 0) scale(1.28);
+  opacity: 0.42;
   filter: blur(1px) saturate(1.1) brightness(0.78);
   mix-blend-mode: screen;
   mask-image: linear-gradient(to bottom, transparent 0%, black 42%, transparent 100%);
@@ -344,8 +344,8 @@ img {
 
 .hero-forest-front {
   background-position: 50% 80%;
-  transform: translate3d(calc(var(--parallax-x) * 44px), calc(var(--parallax-y) * 26px), 0) scale(1.23);
-  opacity: 0.2;
+  transform: translate3d(calc(var(--parallax-x) * 112px), calc(var(--parallax-y) * 64px + var(--scroll-y) * -96px), 0) scale(1.38);
+  opacity: 0.34;
   filter: blur(2px) brightness(0.52);
   mask-image: linear-gradient(to bottom, transparent 0%, transparent 52%, black 100%);
 }
@@ -355,17 +355,17 @@ img {
   background:
     radial-gradient(circle at calc(28% + var(--parallax-x) * 8%) calc(16% + var(--parallax-y) * 8%), rgba(163, 230, 53, 0.18), transparent 21rem),
     radial-gradient(circle at calc(84% + var(--parallax-x) * -10%) calc(20% + var(--parallax-y) * 6%), rgba(255, 182, 205, 0.15), transparent 24rem),
-    linear-gradient(90deg, rgba(26, 36, 31, 0.92), rgba(26, 36, 31, 0.72) 42%, rgba(26, 36, 31, 0.86)),
-    linear-gradient(180deg, rgba(26, 36, 31, 0.18), rgba(26, 36, 31, 0.84));
+    linear-gradient(90deg, rgba(26, 36, 31, 0.78), rgba(26, 36, 31, 0.48) 42%, rgba(26, 36, 31, 0.72)),
+    linear-gradient(180deg, rgba(26, 36, 31, 0.08), rgba(26, 36, 31, 0.72));
 }
 
 @keyframes forestBreath {
   from {
-    transform: translate3d(calc(var(--parallax-x) * -18px), calc(var(--parallax-y) * -12px), 0) scale(1.09);
+    transform: translate3d(calc(var(--parallax-x) * -42px), calc(var(--parallax-y) * -26px + var(--scroll-y) * 42px), 0) scale(1.16);
   }
 
   to {
-    transform: translate3d(calc(var(--parallax-x) * -18px + 8px), calc(var(--parallax-y) * -12px - 5px), 0) scale(1.13);
+    transform: translate3d(calc(var(--parallax-x) * -42px + 16px), calc(var(--parallax-y) * -26px + var(--scroll-y) * 42px - 10px), 0) scale(1.22);
   }
 }
 
@@ -399,4 +399,21 @@ img {
   .hero-forest-layer {
     transform: none !important;
   }
+}
+
+
+.hero-forest-section::after {
+  content: "";
+  position: absolute;
+  inset: auto -8% -18% -8%;
+  z-index: 0;
+  height: 34%;
+  pointer-events: none;
+  background: linear-gradient(0deg, rgba(9, 18, 15, 0.9), rgba(9, 18, 15, 0));
+  transform: translate3d(calc(var(--parallax-x) * 52px), calc(var(--scroll-y) * -72px), 0);
+  filter: blur(10px);
+}
+
+.portfolio-shell.light .hero-forest-section::after {
+  background: linear-gradient(0deg, rgba(255, 240, 246, 0.82), rgba(255, 240, 246, 0));
 }

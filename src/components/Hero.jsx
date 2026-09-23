@@ -1,8 +1,28 @@
 import { ArrowUpRight, Network } from "lucide-react";
+import { useEffect, useRef } from "react";
 import Experience from "./Experience.jsx";
 import { awards, capabilities, contactLinks } from "../data/portfolioData.js";
 
 export default function Hero({ setActiveSection }) {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const updateScrollParallax = () => {
+      if (!sectionRef.current) return;
+      const rect = sectionRef.current.getBoundingClientRect();
+      const progress = Math.max(-1, Math.min(1, rect.top / window.innerHeight));
+      sectionRef.current.style.setProperty("--scroll-y", progress.toFixed(3));
+    };
+
+    updateScrollParallax();
+    window.addEventListener("scroll", updateScrollParallax, { passive: true });
+    window.addEventListener("resize", updateScrollParallax);
+    return () => {
+      window.removeEventListener("scroll", updateScrollParallax);
+      window.removeEventListener("resize", updateScrollParallax);
+    };
+  }, []);
+
   const handlePointerMove = (event) => {
     const bounds = event.currentTarget.getBoundingClientRect();
     const x = (event.clientX - bounds.left) / bounds.width - 0.5;
@@ -18,11 +38,12 @@ export default function Hero({ setActiveSection }) {
 
   return (
     <section
+      ref={sectionRef}
       id="home"
       className="hero-forest-section relative overflow-hidden px-5 pb-10 pt-6 sm:px-8 lg:px-12"
       onPointerMove={handlePointerMove}
       onPointerLeave={resetParallax}
-      style={{ "--parallax-x": 0, "--parallax-y": 0 }}
+      style={{ "--parallax-x": 0, "--parallax-y": 0, "--scroll-y": 0 }}
     >
       <div className="hero-forest-layer hero-forest-back" />
       <div className="hero-forest-layer hero-forest-mid" />
