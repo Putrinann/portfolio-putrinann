@@ -13,9 +13,13 @@ const learningIssuers = new Set(["AWS", "DQLab", "IBM"]);
 function CertificationsContent() {
   const [activeTab, setActiveTab] = useState("learning");
   const [showAll, setShowAll] = useState(false);
+  const learningIssuerOrder = { IBM: 0, DQLab: 1, AWS: 2 };
   const filteredCertificates = certifications.filter((certificate) => {
     const isLearning = learningIssuers.has(certificate.issuer);
     return activeTab === "learning" ? isLearning : !isLearning;
+  }).sort((a, b) => {
+    if (activeTab !== "learning") return 0;
+    return (learningIssuerOrder[a.issuer] ?? 99) - (learningIssuerOrder[b.issuer] ?? 99);
   });
   const visibleCertificates = showAll ? filteredCertificates : filteredCertificates.slice(0, INITIAL_CERTIFICATE_COUNT);
   const hasMore = filteredCertificates.length > INITIAL_CERTIFICATE_COUNT;

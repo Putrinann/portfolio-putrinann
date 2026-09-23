@@ -314,13 +314,13 @@ img {
 .hero-forest-layer,
 .hero-forest-vignette {
   position: absolute;
-  inset: -10% -6%;
+  inset: -18% -10%;
   pointer-events: none;
 }
 
 .hero-forest-layer {
   z-index: 0;
-  background-image: url("/images/hero/forest-bg.jpg");
+  background-image: url("/images/hero/forest.jpg");
   background-size: cover;
   background-position: center;
   will-change: transform, opacity;
@@ -403,34 +403,17 @@ img {
 }
 
 
-.hero-forest-section::after {
-  content: "";
-  position: absolute;
-  inset: auto -8% -18% -8%;
-  z-index: 0;
-  height: 34%;
-  pointer-events: none;
-  background: linear-gradient(0deg, rgba(9, 18, 15, 0.9), rgba(9, 18, 15, 0));
-  transform: translate3d(calc(var(--parallax-x) * 52px), calc(var(--scroll-y) * -72px), 0);
-  filter: blur(10px);
-}
-
-.portfolio-shell.light .hero-forest-section::after {
-  background: linear-gradient(0deg, rgba(255, 240, 246, 0.82), rgba(255, 240, 246, 0));
-}
-
-
 /* Soft forest edges */
 .hero-forest-back {
-  mask-image: linear-gradient(to bottom, transparent 0%, black 9rem, black calc(100% - 11rem), transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 8rem, black calc(100% - 14rem), transparent 100%);
 }
 
 .hero-forest-mid {
-  mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 74%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 22%, black 72%, transparent 100%);
 }
 
 .hero-forest-front {
-  mask-image: linear-gradient(to bottom, transparent 0%, transparent 42%, black 64%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, transparent 44%, black 64%, transparent 100%);
 }
 
 .hero-forest-section {

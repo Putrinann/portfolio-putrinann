@@ -21,7 +21,7 @@ export default function Organizations({ embedded = false }) {
     setDragStart(null);
   };
 
-  const shuffledMoments = [moments[2], moments[0], moments[5], moments[8], moments[1], moments[10], moments[4], moments[6], moments[3], moments[9], moments[7]].filter(Boolean);
+  const shuffledMoments = [moments[2], moments[0], moments[5], moments[4], moments[1], moments[10], moments[8], moments[6], moments[3], moments[9], moments[7]].filter(Boolean);
   const pinterestHeights = ["h-48", "h-32", "h-64", "h-40", "h-56", "h-36", "h-72", "h-44", "h-60", "h-36", "h-52"];
 
   const content = (
