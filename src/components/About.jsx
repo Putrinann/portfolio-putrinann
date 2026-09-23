@@ -1,6 +1,5 @@
 import Card from "./Card.jsx";
 import Certifications from "./Certifications.jsx";
-import Moments from "./Moments.jsx";
 import Organizations from "./Organizations.jsx";
 import Section from "./Section.jsx";
 import { bioCards } from "../data/portfolioData.js";
@@ -92,9 +91,6 @@ export default function About() {
       </div>
       <div className="mt-8">
         <Certifications embedded />
-      </div>
-      <div className="mt-8">
-        <Moments embedded />
       </div>
     </Section>
   );

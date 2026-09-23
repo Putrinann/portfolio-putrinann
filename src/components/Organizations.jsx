@@ -1,7 +1,7 @@
 import { ArrowLeft, ArrowRight, HeartHandshake } from "lucide-react";
 import { useState } from "react";
 import Section from "./Section.jsx";
-import { organizations, volunteerMoments } from "../data/portfolioData.js";
+import { moments, organizations, volunteerMoments } from "../data/portfolioData.js";
 
 export default function Organizations({ embedded = false }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -21,11 +21,23 @@ export default function Organizations({ embedded = false }) {
     setDragStart(null);
   };
 
+  const miniMoments = [moments[2], moments[6], moments[0], moments[4], moments[1], moments[8], moments[10], moments[5]].filter(Boolean);
+  const momentTileClasses = [
+    "row-span-2 min-h-[11rem]",
+    "min-h-[8rem]",
+    "min-h-[9rem]",
+    "row-span-2 min-h-[12rem]",
+    "min-h-[8rem]",
+    "min-h-[10rem]",
+    "min-h-[8rem]",
+    "row-span-2 min-h-[11rem]"
+  ];
+
   const content = (
     <div className="grid gap-5 lg:grid-cols-2 lg:items-center">
       <div className="volunteer-card rounded-lg border border-pink-200/70 bg-gradient-to-br from-[#ffdce9] via-[#f7e8ef] to-[#cceeff] p-3 text-darkArmy shadow-soft sm:p-4">
-        <div className="grid gap-3 sm:grid-cols-2 sm:auto-rows-[15rem]">
-          <div className="flex min-h-[13rem] flex-col justify-center rounded-md bg-white/58 p-4 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.45)] sm:min-h-0">
+        <div className="grid gap-3 md:grid-cols-[0.38fr_0.62fr]">
+          <div className="flex min-h-[10rem] flex-col justify-center rounded-md bg-white/58 p-4 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.45)] md:min-h-0">
             <div className="flex items-start gap-3">
               <HeartHandshake className="mt-1 h-7 w-7 shrink-0" />
               <div>
@@ -37,14 +49,21 @@ export default function Organizations({ embedded = false }) {
               "Volunteering has taught me to lead with empathy and act with purpose."
             </blockquote>
           </div>
-          {volunteerMoments.map((moment) => (
-            <figure key={moment.title} className="relative min-h-[13rem] overflow-hidden rounded-md bg-white/60 sm:min-h-0">
-              <img src={moment.image} alt={moment.title} className="h-full w-full object-cover" />
-              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-darkArmy/95 via-darkArmy/70 to-transparent px-3 pb-3 pt-12 text-xs font-bold leading-4 text-offWhite">
-                {moment.title}
-              </figcaption>
-            </figure>
-          ))}
+          <div className="max-h-[28rem] overflow-y-auto pr-1">
+            <div className="grid auto-rows-[4.5rem] grid-cols-2 gap-2 sm:grid-cols-3">
+              {miniMoments.map((moment, index) => (
+                <figure
+                  key={moment.title}
+                  className={"relative overflow-hidden rounded-lg bg-white/60 " + momentTileClasses[index % momentTileClasses.length]}
+                >
+                  <img src={moment.image} alt={moment.title} className="h-full w-full object-cover" />
+                  <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-darkArmy/95 via-darkArmy/65 to-transparent px-2 pb-2 pt-10 text-[0.62rem] font-bold leading-3 text-offWhite">
+                    {moment.title}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
       <div
