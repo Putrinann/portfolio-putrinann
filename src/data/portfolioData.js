@@ -102,8 +102,13 @@ export const projects = [
       "/images/projects/vanilla-booth-decorate-worn.png"
     ],
     description:
-      "A playful virtual photobooth where users can take photos with the camera or upload from their gallery, choose shots to decorate, then customize them with layouts, themes, filters, zoom, drag adjustment, and cute sticker details.",
-    tags: ["Camera Capture", "Photo Upload", "Image Decoration", "Filters", "Stickers", "Interactive UI"]
+      "A browser-based virtual photobooth for capturing or uploading photos, selecting favorite shots, decorating them with layouts, frames, filters, colors, draggable stickers, and exporting the final result.",
+    details: [
+      "Capture flow with webcam access, manual upload, retake, photo selection, and timer options.",
+      "Decoration workspace with Polaroid, strip, and grid layouts plus frame templates, filters, sticker placement, photo positioning, and scaling.",
+      "Export support for PNG download, browser print, and short WebM animation using canvas rendering."
+    ],
+    tags: ["React", "Vite", "Tailwind CSS", "react-webcam", "html2canvas", "Photo Export"]
   },
   {
     eyebrow: "Project 02",
@@ -120,8 +125,14 @@ export const projects = [
       "/images/projects/bimbi-teacher-dashboard.png"
     ],
     description:
-      "A full-stack kindergarten platform that connects teachers and parents through role-based portals for daily habit and prayer tracking, 1-3 photo activity submissions, teacher star evaluations, learning-material history, remote-class links, and student biodata management secured with Supabase Row-Level Security.",
-    tags: ["React.js", "Tailwind CSS", "Supabase", "PostgreSQL", "Auth", "Storage", "Role-Based Access"]
+      "A role-based kindergarten communication platform for Admin, Teacher, and Parent users to manage class data, student profiles, daily journals, learning materials, teacher feedback, and parent-facing reports.",
+    details: [
+      "Admin manages users, classes, teacher assignments, school data, and learning links from one dashboard.",
+      "Teachers review daily journals, update class materials and meeting links, add ratings, and monitor student progress.",
+      "Parents view child biodata, daily reports, photo galleries, learning history, teacher feedback, and report summaries.",
+      "Supabase schema prepares Auth, profiles, classes, students, daily reports, report photos, Edge Functions, and Row-Level Security."
+    ],
+    tags: ["React 19", "Vite", "Tailwind CSS", "Supabase", "RLS", "Role-Based Access"]
   },
   {
     eyebrow: "Project 03",
@@ -140,8 +151,13 @@ export const projects = [
       "/images/projects/warehouse-picking-instruction-blurred.png"
     ],
     description:
-      "A practical digital system for warehouse, logistics, inventory, labeling, receiving, and reporting workflows, built to reduce manual process friction.",
-    tags: ["React", "Node.js", "SQL Server", "REST API", "System Testing", "User Training"]
+      "A warehouse digitalization system for logistics, inventory, labeling, receiving, reporting, QR-integrated flows, and Microsoft SQL Server-backed operational data.",
+    details: [
+      "Built modules for warehouse transactions, receiving, relabeling, checklist flows, reports, and operational validation.",
+      "Supported QR integration for faster item identification and workflow tracking.",
+      "Worked with Microsoft SQL Server data, REST APIs, testing cycles, documentation, and user feedback."
+    ],
+    tags: ["React", "Node.js", "Microsoft SQL Server", "QR Integration", "REST API", "System Testing"]
   },
   {
     eyebrow: "Project 04",
@@ -183,13 +199,16 @@ export const projects = [
       "/images/projects/meilan-current-cart.png",
       "/images/projects/meilan-invoice.png",
       "/images/projects/meilan-transaction-history.png",
-      "/images/projects/meilan-products.png",
-      "/images/projects/shoe-revenue-dashboard.svg",
-      "/images/projects/shoe-revenue-dashboard-proof-2.svg"
+      "/images/projects/meilan-products.png"
     ],
     description:
-      "A revenue dashboard web application with forecasting, data visualization, and export support for cleaner business insights.",
-    tags: ["PHP Native", "Forecasting", "Data Visualization", "CSV Export", "PDF Export"]
+      "A CRUD-focused shoe store management system for handling product data, stock, order search, cart flow, invoices, transaction history, and dashboard summaries.",
+    details: [
+      "Product CRUD covers item names, prices, sizes, stock, edit, and delete actions.",
+      "Order flow includes product search, cart quantity input, invoice preview, print action, and transaction history.",
+      "Dashboard summarizes store activity while keeping the system focused on practical sales administration."
+    ],
+    tags: ["PHP Native", "CRUD System", "Order Management", "Invoice", "Product Stock", "Dashboard"]
   }
 ];
 
@@ -214,7 +233,7 @@ export const volunteerMoments = [
     image: "/images/impact/volunteer-committee-moments.png"
   },
   {
-    title: "Community & Volunteer Highlights",
+    title: "Community Highlights",
     image: "/images/impact/volunteer-moments-collage.png"
   },
   {
@@ -241,7 +260,11 @@ export const moments = [
     image: "/images/impact/yki-art-craft-moments.png"
   },
   {
-    title: "Volunteer Culture Session",
+    title: "SDG 4 with AIESEC",
+    image: "/images/moments/sdg-aiesec-moment.png"
+  },
+  {
+    title: "Culture Session",
     image: "/images/moments/sehari-mengabdi-moment.jpeg"
   },
   {
@@ -249,11 +272,11 @@ export const moments = [
     image: "/images/moments/planet-volunteer-moment.jpeg"
   },
   {
-    title: "Graduation Day Friends",
+    title: "Uni Life Moments",
     image: "/images/moments/graduation-friends-collage-1.jpeg"
   },
   {
-    title: "Graduation Collage",
+    title: "Defense Moments",
     image: "/images/moments/graduation-friends-collage-2.jpeg"
   },
   {
@@ -276,7 +299,7 @@ export const organizations = [
     image: "/images/certifications/san-event-organizer-certificate.png"
   },
   {
-    title: "Volunteer - Cemar Berbagi at Yayasan Yatim Darul Aitam (2024)",
+    title: "Volunteer - Gemar Berbagi at Yayasan Yatim Darul Aitam (2024)",
     image: "/images/certifications/cemar-berbagi-volunteer.png"
   },
   {
@@ -413,6 +436,11 @@ export const certifications = [
     title: "Finalist - IDEAS National Business Plan Competition Batch 11",
     issuer: "FEB UGM",
     image: "/images/certifications/feb-ugm-business-plan-finalist.png"
+  },
+  {
+    title: "ImpactED 1.0 by AIESEC",
+    issuer: "AIESEC",
+    image: "/images/certifications/impacted-joining-certificate.png"
   },
   {
     title: "Youth Today x Join AIESEC - Enhancing Communication Through Critical Thinking",

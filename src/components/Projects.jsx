@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Info } from "lucide-react";
 import { useState } from "react";
 import Section from "./Section.jsx";
 import Tag from "./Tag.jsx";
@@ -22,6 +22,7 @@ export default function Projects() {
 
 function ProjectCard({ project }) {
   const [activeImage, setActiveImage] = useState(0);
+  const [showDetails, setShowDetails] = useState(false);
   const images = project.images;
   const nextImage = () => setActiveImage((index) => (index + 1) % images.length);
   const previousImage = () => setActiveImage((index) => (index - 1 + images.length) % images.length);
@@ -73,6 +74,28 @@ function ProjectCard({ project }) {
         <h3 className="text-lg font-semibold leading-6 text-offWhite">{project.title}</h3>
         <p className="mt-1 text-xs font-semibold leading-5 text-electric">{project.partner}</p>
         <p className="mt-4 text-sm leading-6 text-offWhite/68">{project.description}</p>
+        {project.details ? (
+          <div className="mt-4">
+            <button
+              type="button"
+              onClick={() => setShowDetails((value) => !value)}
+              className="inline-flex items-center gap-1 rounded-full border border-offWhite/15 bg-darkArmy/60 px-3 py-1 text-[0.65rem] font-black uppercase tracking-[0.1em] text-pastel transition hover:border-electric hover:text-electric"
+            >
+              <Info size={12} />
+              {showDetails ? "Hide Info" : "Details"}
+            </button>
+            {showDetails && (
+              <ul className="mt-3 grid gap-2 rounded-md border border-offWhite/10 bg-darkArmy/45 p-3 text-xs leading-5 text-offWhite/68">
+                {project.details.map((detail) => (
+                  <li key={detail} className="flex gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-electric" />
+                    <span>{detail}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ) : null}
         <div className="mt-5 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <Tag key={tag}>{tag}</Tag>
