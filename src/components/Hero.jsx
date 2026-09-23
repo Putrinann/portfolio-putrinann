@@ -3,9 +3,32 @@ import Experience from "./Experience.jsx";
 import { awards, capabilities, contactLinks } from "../data/portfolioData.js";
 
 export default function Hero({ setActiveSection }) {
+  const handlePointerMove = (event) => {
+    const bounds = event.currentTarget.getBoundingClientRect();
+    const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+    const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+    event.currentTarget.style.setProperty("--parallax-x", x.toFixed(3));
+    event.currentTarget.style.setProperty("--parallax-y", y.toFixed(3));
+  };
+
+  const resetParallax = (event) => {
+    event.currentTarget.style.setProperty("--parallax-x", "0");
+    event.currentTarget.style.setProperty("--parallax-y", "0");
+  };
+
   return (
-    <section id="home" className="relative px-5 pb-10 pt-6 sm:px-8 lg:px-12">
-      <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[minmax(0,1fr)_220px] xl:grid-cols-[minmax(0,1fr)_260px]">
+    <section
+      id="home"
+      className="hero-forest-section relative overflow-hidden px-5 pb-10 pt-6 sm:px-8 lg:px-12"
+      onPointerMove={handlePointerMove}
+      onPointerLeave={resetParallax}
+      style={{ "--parallax-x": 0, "--parallax-y": 0 }}
+    >
+      <div className="hero-forest-layer hero-forest-back" />
+      <div className="hero-forest-layer hero-forest-mid" />
+      <div className="hero-forest-layer hero-forest-front" />
+      <div className="hero-forest-vignette" />
+      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[minmax(0,1fr)_220px] xl:grid-cols-[minmax(0,1fr)_260px]">
         <div className="relative z-10 max-w-2xl animate-fade-up">
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-electric/20 bg-army/45 px-3 py-1.5 text-[0.65rem] font-bold uppercase tracking-[0.16em] text-pastel">
             <Network className="h-3.5 w-3.5 text-electric" />
@@ -67,7 +90,7 @@ export default function Hero({ setActiveSection }) {
         </div>
       </div>
 
-      <div className="mx-auto mt-10 grid max-w-7xl gap-8 lg:grid-cols-[1fr_0.9fr]">
+      <div className="relative z-10 mx-auto mt-10 grid max-w-7xl gap-8 lg:grid-cols-[1fr_0.9fr]">
         <div>
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-pastel">Capabilities</p>
           <div className="grid gap-3 sm:grid-cols-2">
@@ -99,7 +122,7 @@ export default function Hero({ setActiveSection }) {
           </div>
         </div>
       </div>
-      <div className="mx-auto mt-8 max-w-7xl">
+      <div className="relative z-10 mx-auto mt-8 max-w-7xl">
         <Experience compact />
       </div>
     </section>
