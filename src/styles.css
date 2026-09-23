@@ -314,7 +314,7 @@ img {
 .hero-forest-layer,
 .hero-forest-vignette {
   position: absolute;
-  inset: 0;
+  inset: -10% -6%;
   pointer-events: none;
 }
 
@@ -352,6 +352,7 @@ img {
 
 .hero-forest-vignette {
   z-index: 0;
+  inset: -2px;
   background:
     radial-gradient(circle at calc(28% + var(--parallax-x) * 8%) calc(16% + var(--parallax-y) * 8%), rgba(163, 230, 53, 0.18), transparent 21rem),
     radial-gradient(circle at calc(84% + var(--parallax-x) * -10%) calc(20% + var(--parallax-y) * 6%), rgba(255, 182, 205, 0.15), transparent 24rem),
@@ -416,4 +417,26 @@ img {
 
 .portfolio-shell.light .hero-forest-section::after {
   background: linear-gradient(0deg, rgba(255, 240, 246, 0.82), rgba(255, 240, 246, 0));
+}
+
+
+/* Soft forest edges */
+.hero-forest-back {
+  mask-image: linear-gradient(to bottom, transparent 0%, black 9rem, black calc(100% - 11rem), transparent 100%);
+}
+
+.hero-forest-mid {
+  mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 74%, transparent 100%);
+}
+
+.hero-forest-front {
+  mask-image: linear-gradient(to bottom, transparent 0%, transparent 42%, black 64%, transparent 100%);
+}
+
+.hero-forest-section {
+  background: linear-gradient(180deg, rgba(26, 36, 31, 0), rgba(26, 36, 31, 0.28) 88%, rgba(26, 36, 31, 0));
+}
+
+.portfolio-shell.light .hero-forest-section {
+  background: linear-gradient(180deg, rgba(255, 250, 245, 0), rgba(255, 244, 248, 0.36) 88%, rgba(255, 250, 245, 0));
 }
