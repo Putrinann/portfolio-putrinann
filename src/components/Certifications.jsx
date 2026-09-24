@@ -8,12 +8,12 @@ const tabs = [
   { id: "learning", label: "Learning Data" },
   { id: "leadership", label: "Leadership & Award" }
 ];
-const learningIssuers = new Set(["AWS", "DQLab", "IBM"]);
+const learningIssuers = new Set(["AWS", "DQLab", "Dicoding", "IBM"]);
 
 function CertificationsContent() {
   const [activeTab, setActiveTab] = useState("learning");
   const [showAll, setShowAll] = useState(false);
-  const learningIssuerOrder = { IBM: 0, DQLab: 1, AWS: 2 };
+  const learningIssuerOrder = { IBM: 0, DQLab: 1, Dicoding: 2, AWS: 3 };
   const filteredCertificates = certifications.filter((certificate) => {
     const isLearning = learningIssuers.has(certificate.issuer);
     return activeTab === "learning" ? isLearning : !isLearning;

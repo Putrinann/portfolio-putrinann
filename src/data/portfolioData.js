@@ -209,6 +209,23 @@ export const projects = [
       "Dashboard summarizes store activity while keeping the system focused on practical sales administration."
     ],
     tags: ["PHP Native", "CRUD System", "Order Management", "Invoice", "Product Stock", "Dashboard"]
+  },
+  {
+    eyebrow: "Project 07",
+    title: "Web Basics Journal",
+    partner: "Dicoding - Belajar Dasar Pemrograman Web",
+    images: [
+      "/images/projects/web-basics-journal-home.png",
+      "/images/projects/web-basics-journal-summary.png"
+    ],
+    description:
+      "A simple learning journal website built after completing Dicoding web basics training, covering semantic HTML structure, clean CSS styling, and a compact responsive layout.",
+    details: [
+      "Built a structured landing page with navigation, hero content, summary cards, article area, and Dicoding learning context.",
+      "Practiced semantic HTML sections and reusable CSS styling for spacing, typography, colors, and layout consistency.",
+      "Used flexible layout patterns to keep the journal readable across desktop and smaller screens."
+    ],
+    tags: ["HTML", "CSS", "Semantic HTML", "Flexbox", "Responsive Layout"]
   }
 ];
 
@@ -431,6 +448,16 @@ export const certifications = [
     title: "Introduction to SQL with AI",
     issuer: "DQLab",
     image: "/images/certifications/dqlab-introduction-sql-ai.png"
+  },
+  {
+    title: "Belajar Dasar Pemrograman Web",
+    issuer: "Dicoding",
+    image: "/images/certifications/dicoding-belajar-dasar-pemrograman-web.png"
+  },
+  {
+    title: "Belajar Penerapan Data Science dengan Microsoft Fabric",
+    issuer: "Dicoding",
+    image: "/images/certifications/dicoding-microsoft-fabric-data-science.png"
   },
   {
     title: "Finalist - IDEAS National Business Plan Competition Batch 11",
