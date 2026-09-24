@@ -4,7 +4,7 @@ import { contactLinks } from "../data/portfolioData.js";
 
 export default function Contact() {
   return (
-    <Section id="contact" className="relative z-30 overflow-visible pb-20 pt-20 text-center" eyebrow="Contact" title="Want to discuss?" align="center">
+    <Section id="contact" className="relative z-30 overflow-visible pb-20 pt-28 text-center sm:pt-32" eyebrow="Contact" title="Want to discuss?" align="center">
       <p className="mx-auto max-w-2xl text-base leading-8 text-offWhite/68 md:text-lg">
         I may not have every answer right away, but I would love to contribute, learn the context, and help move thoughtful ideas closer to a solution.
       </p>
