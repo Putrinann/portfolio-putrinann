@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">SM4ILS logistics system overview</title>
+  <desc id="desc">A teal and navy logistics platform overview with dashboard, route, and mobile workflow cards.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#071f3c"/><stop offset="1" stop-color="#0d6370"/></linearGradient>
+    <linearGradient id="accent" x1="0" x2="1"><stop stop-color="#16c1ae"/><stop offset="1" stop-color="#a7e85c"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#001326" flood-opacity=".35"/></filter>
+  </defs>
+  <rect width="1200" height="760" rx="34" fill="url(#bg)"/>
+  <circle cx="1010" cy="110" r="180" fill="#a7e85c" opacity=".08"/>
+  <circle cx="180" cy="650" r="230" fill="#16c1ae" opacity=".1"/>
+  <g fill="#fff" font-family="Arial, sans-serif">
+    <text x="72" y="112" font-size="22" font-weight="700" fill="#b9f36b">REAL CLIENT CAPSTONE</text>
+    <text x="72" y="186" font-size="64" font-weight="800">SM4ILS</text>
+    <text x="72" y="230" font-size="24" font-weight="700" fill="#d5f6ee">Smart W4C Integrated Logistics System</text>
+    <text x="72" y="286" font-size="20" fill="#c9dce4">Digitalizing logistics operations for</text>
+    <text x="72" y="316" font-size="20" fill="#c9dce4">PT Wasteforchange Alam Indonesia</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="72" y="390" width="490" height="260" rx="22" fill="#f7fbfd"/>
+    <rect x="72" y="390" width="490" height="42" rx="22" fill="#0d7180"/>
+    <circle cx="102" cy="411" r="7" fill="#a7e85c"/><circle cx="126" cy="411" r="7" fill="#fce39b"/><circle cx="150" cy="411" r="7" fill="#ff9f9f"/>
+    <rect x="98" y="466" width="115" height="46" rx="10" fill="#e8f6f1"/><rect x="230" y="466" width="115" height="46" rx="10" fill="#eef4ff"/><rect x="362" y="466" width="115" height="46" rx="10" fill="#fff4d9"/>
+    <rect x="98" y="538" width="360" height="9" rx="4" fill="#d3e5ea"/><rect x="98" y="563" width="300" height="9" rx="4" fill="#d3e5ea"/><rect x="98" y="588" width="395" height="9" rx="4" fill="#d3e5ea"/>
+  </g>
+  <g filter="url(#shadow)" transform="translate(710 250) rotate(7)">
+    <rect width="270" height="410" rx="34" fill="#f7fbfd"/>
+    <rect x="18" y="32" width="234" height="110" rx="16" fill="#dff8f3"/>
+    <rect x="34" y="62" width="126" height="14" rx="7" fill="#0d7180"/><rect x="34" y="92" width="182" height="10" rx="5" fill="#8acfc1"/>
+    <rect x="28" y="174" width="214" height="86" rx="16" fill="#eef4ff"/><path d="M48 234 C80 196 104 230 136 197 S200 218 224 183" fill="none" stroke="#16a9bb" stroke-width="6"/>
+    <rect x="28" y="286" width="214" height="50" rx="25" fill="url(#accent)"/><text x="74" y="318" font-family="Arial" font-size="17" font-weight="700" fill="#072841">CONFIRM PICKUP</text>
+  </g>
+</svg>

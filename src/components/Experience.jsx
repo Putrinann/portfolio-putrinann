@@ -6,10 +6,10 @@ import { experiences } from "../data/portfolioData.js";
 
 function ExperienceContent() {
   return (
-    <div className="grid gap-3 lg:grid-cols-2">
+    <div className="grid gap-5">
       {experiences.map((experience) => (
         <Card key={experience.company} className="experience-card overflow-hidden p-0">
-          <div className="experience-card-header relative h-44 overflow-hidden border-b border-offWhite/10 bg-pastel text-offWhite">
+          <div className="experience-card-header relative h-48 overflow-hidden border-b border-offWhite/10 bg-pastel text-offWhite md:h-56">
             <img
               src={experience.image}
               alt={`${experience.company} visual`}
@@ -22,19 +22,39 @@ function ExperienceContent() {
               <p className="mt-2 text-[0.65rem] font-black uppercase tracking-[0.12em] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.75)]">{experience.location}</p>
             </div>
           </div>
-          <div className="p-4">
+          <div className="p-5 md:p-6">
             <h3 className="text-base font-semibold leading-6 text-offWhite">{experience.role}</h3>
             <p className="experience-period mt-1 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-electric">{experience.period}</p>
-            <p className="mt-3 text-xs leading-6 text-offWhite/72">{experience.summary}</p>
-            <ul className="mt-3 space-y-2 text-xs leading-5 text-offWhite/64">
-              {experience.bullets.map((bullet) => (
-                <li key={bullet}>- {bullet}</li>
-              ))}
-            </ul>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {experience.tags.map((tag) => (
-                <Tag key={tag}>{tag}</Tag>
-              ))}
+            <div className="mt-5 grid gap-5 md:grid-cols-[1.05fr_1.95fr]">
+              <div>
+                <p className="text-[0.65rem] font-black uppercase tracking-[0.16em] text-pastel">Overview</p>
+                <p className="mt-2 text-sm leading-7 text-offWhite/72">{experience.summary}</p>
+                {experience.learning ? (
+                  <div className="mt-4 rounded-xl border border-electric/15 bg-electric/5 p-4">
+                    <p className="text-[0.65rem] font-black uppercase tracking-[0.16em] text-electric">What I learned</p>
+                    <p className="mt-2 text-xs leading-6 text-offWhite/68">{experience.learning}</p>
+                  </div>
+                ) : null}
+              </div>
+              <div>
+                <p className="text-[0.65rem] font-black uppercase tracking-[0.16em] text-pastel">Responsibilities</p>
+                <ul className="mt-3 grid gap-3 text-sm leading-6 text-offWhite/68">
+                  {experience.bullets.map((bullet) => (
+                    <li key={bullet} className="flex gap-3">
+                      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-electric" />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <div className="mt-5 border-t border-offWhite/10 pt-4">
+              <p className="text-[0.65rem] font-black uppercase tracking-[0.16em] text-pastel">Tools &amp; focus areas</p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {experience.tags.map((tag) => (
+                  <Tag key={tag}>{tag}</Tag>
+                ))}
+              </div>
             </div>
           </div>
         </Card>

@@ -9,7 +9,7 @@ export default function Projects() {
   return (
     <Section id="projects" eyebrow="Selected Projects" title="Work that connects systems, data, and decisions." align="center">
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-        {projects.map((project) => (
+        {[...projects].sort((a, b) => (a.priority ?? 99) - (b.priority ?? 99)).map((project) => (
           <ProjectCard key={project.title} project={project} />
         ))}
       </div>

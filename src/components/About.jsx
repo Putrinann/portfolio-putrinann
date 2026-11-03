@@ -66,12 +66,7 @@ export default function About() {
                 </div>
               )}
               <h3 className="text-sm font-black uppercase tracking-[0.12em] text-offWhite">{biography?.title}</h3>
-              <p className="mt-2 text-justify text-xs leading-6 text-offWhite/66">
-                I am a final-year Information Systems undergraduate student at President University with a concentration in Data Science. I am proactive,
-                adaptable, and experienced in volunteering, event committees, and internships as a fullstack web developer and graphic designer. I work in a
-                structured way, manage time carefully, and contribute effectively both independently and as part of a team. With strong emotional management, I
-                stay composed under pressure and navigate challenges with poise.
-              </p>
+              <p className="mt-2 text-justify text-xs leading-6 text-offWhite/66">{biography?.description}</p>
             </Card>
           </div>
 

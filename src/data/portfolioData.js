@@ -56,11 +56,15 @@ export const experiences = [
     role: "Fullstack Developer Intern - Warehouse Digitalization",
     period: "Sept 2025 - May 2026",
     summary:
-      "Built and supported warehouse digitalization modules that connect operational workflows, reporting needs, data validation, testing, and user feedback.",
+      "Built and supported warehouse digitalization modules that connected daily operational workflows with reporting, data validation, testing, and user feedback.",
     bullets: [
-      "Developed practical warehouse modules for operational tracking and reporting.",
-      "Supported validation, testing, documentation, and user feedback cycles."
+      "Developed and refined warehouse modules for receiving, relabeling, checklist flows, transaction tracking, stocktaking, and operational reporting.",
+      "Worked with React, Node.js, Microsoft SQL Server, REST APIs, and QR-integrated flows to support practical warehouse operations.",
+      "Prepared test scenarios, validated data and system behavior, documented findings, and supported retesting with users and stakeholders.",
+      "Translated user feedback into clearer workflows, interface improvements, and follow-up actions for the development team."
     ],
+    learning:
+      "Strengthened my ability to understand real operational processes, communicate across technical and non-technical teams, and deliver reliable systems in a manufacturing environment.",
     tags: [
       "System Development",
       "Data Validation",
@@ -80,16 +84,21 @@ export const experiences = [
     summary:
       "Handled campaign design requests while coordinating with team members, meeting deadlines, and keeping deliverables aligned with brand and stakeholder needs.",
     bullets: [
-      "Handled 3-4 design requests per week while maintaining output accuracy.",
-      "Produced campaign assets using Canva and Figma aligned with brand guidelines."
+      "Handled 3-4 design requests per week while maintaining output accuracy and consistent delivery timelines.",
+      "Produced campaign assets using Canva and Figma while following brand guidelines and stakeholder feedback.",
+      "Supported short-form video editing and content preparation using CapCut.",
+      "Coordinated revisions with team members and adapted visual deliverables to different campaign needs."
     ],
+    learning:
+      "Built stronger visual communication, prioritization, stakeholder coordination, and deadline management skills while working in a remote team.",
     tags: ["Graphic Design", "Canva", "Figma", "Campaign Assets", "Brand Guidelines", "Team Coordination", "CapCut / Video Editing"]
   }
 ];
 
 export const projects = [
   {
-    eyebrow: "Project 01",
+    eyebrow: "Project 07",
+    priority: 7,
     title: "Vanilla Booth",
     partner: "Virtual Photobooth Web App",
     liveUrl: "https://vanilla-virtualbooth.vercel.app/",
@@ -112,10 +121,30 @@ export const projects = [
   },
   {
     eyebrow: "Project 02",
+    priority: 2,
+    title: "SM4ILS",
+    partner: "Smart W4C Integrated Logistics System - PT Wasteforchange Alam Indonesia",
+    images: [
+      "/images/projects/sm4ils-cover.svg",
+      "/images/projects/sm4ils-operations.svg",
+      "/images/projects/sm4ils-route.svg",
+      "/images/projects/sm4ils-vendor.svg"
+    ],
+    description:
+      "A real-client capstone project that digitalizes WasteforChange's logistics operations into one role-based platform for customer service, route execution, vendor selection, procurement support, and live monitoring.",
+    details: [
+      "Mapped the transition from fragmented Google Sheets and WhatsApp coordination into an integrated pickup-to-route workflow.",
+      "Designed role-based experiences for Customer, Admin Operational, Driver, Vendor, Procurement Staff, and IT/System Administrator.",
+      "Combined route optimization, operational monitoring, vendor document review, AHP qualification, Random Forest recommendation support, and chatbot assistance.",
+      "Created a user guidebook covering system overview, approval flows, role responsibilities, and step-by-step operational workflows."
+    ],
+    tags: ["Real Client", "React", "Machine Learning", "Logistics", "Route Optimization", "Role-Based System", "Documentation"]
+  },
+  {
+    eyebrow: "Project 03",
+    priority: 3,
     title: "BIMBI",
     partner: "Kindergarten Activity & Habit Tracker",
-    liveUrl: "https://bimbi-kindergarten.vercel.app/",
-    ctaLabel: "Visit",
     images: [
       "/images/projects/bimbi-material-history.png",
       "/images/projects/bimbi-online-report.png",
@@ -135,7 +164,8 @@ export const projects = [
     tags: ["React 19", "Vite", "Tailwind CSS", "Supabase", "RLS", "Role-Based Access"]
   },
   {
-    eyebrow: "Project 03",
+    eyebrow: "Project 01",
+    priority: 1,
     title: "Warehouse Digitalization System",
     partner: "PT OMRON MANUFACTURING OF INDONESIA",
     images: [
@@ -161,6 +191,7 @@ export const projects = [
   },
   {
     eyebrow: "Project 04",
+    priority: 4,
     title: "Plant Cycle Time Dashboard",
     partner: "PT Kalbio Global Medika / Kalbe",
     images: [
@@ -177,6 +208,7 @@ export const projects = [
   },
   {
     eyebrow: "Project 05",
+    priority: 5,
     title: "STUDIVY",
     partner: "Student Performance Prediction Dashboard",
     images: [
@@ -191,6 +223,7 @@ export const projects = [
   },
   {
     eyebrow: "Project 06",
+    priority: 6,
     title: "Shoe Revenue Dashboard",
     partner: "Meilan Store",
     images: [
@@ -211,7 +244,8 @@ export const projects = [
     tags: ["PHP Native", "CRUD System", "Order Management", "Invoice", "Product Stock", "Dashboard"]
   },
   {
-    eyebrow: "Project 07",
+    eyebrow: "Project 08",
+    priority: 8,
     title: "Web Basics Journal",
     partner: "Dicoding - Belajar Dasar Pemrograman Web",
     images: [
@@ -234,7 +268,7 @@ export const bioCards = [
     title: "Biography",
     icon: PenLine,
     description:
-      "I am a final-year Information Systems undergraduate student at President University with a concentration in Data Science. I am proactive, adaptable, and experienced in volunteering, event committees, and internships as a fullstack web developer and graphic designer. I work in a structured way, manage time carefully, and contribute well independently or in a team. With strong emotional management, I stay composed under pressure and navigate challenges with poise."
+      "I am an Information Systems undergraduate student at President University with a concentration in Data Science. My experience spans warehouse digitalization, fullstack web development, data dashboards, system testing, documentation, and visual communication. I enjoy understanding how work happens in the real world, finding where a process becomes unclear, and shaping it into a more reliable digital workflow."
   },
   {
     title: "Fun Facts",
