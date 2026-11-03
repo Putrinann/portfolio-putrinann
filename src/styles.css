@@ -87,7 +87,7 @@ img {
 
 .hero-reveal {
   opacity: 0;
-  animation: heroReveal 800ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: heroReveal 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .hero-reveal-1 { animation-delay: 80ms; }
@@ -189,6 +189,12 @@ img {
   .hero-orbit-glow,
   .animate-float-portrait {
     animation: none;
+  }
+
+  .hero-reveal {
+    opacity: 1;
+    transform: none;
+    filter: none;
   }
 }
 

@@ -97,8 +97,8 @@ export const experiences = [
 
 export const projects = [
   {
-    eyebrow: "Project 07",
-    priority: 7,
+    eyebrow: "Project 04",
+    priority: 4,
     title: "Vanilla Booth",
     partner: "Virtual Photobooth Web App",
     liveUrl: "https://vanilla-virtualbooth.vercel.app/",
@@ -125,10 +125,20 @@ export const projects = [
     title: "SM4ILS",
     partner: "Smart W4C Integrated Logistics System - PT Wasteforchange Alam Indonesia",
     images: [
-      "/images/projects/sm4ils-cover.svg",
-      "/images/projects/sm4ils-operations.svg",
-      "/images/projects/sm4ils-route.svg",
-      "/images/projects/sm4ils-vendor.svg"
+      "/images/projects/smails/Screenshot 2026-11-03 234751.png",
+      "/images/projects/smails/Screenshot 2026-11-04 000837.png",
+      "/images/projects/smails/Screenshot 2026-11-04 000852.png",
+      "/images/projects/smails/Screenshot 2026-11-04 000909.png",
+      "/images/projects/smails/Screenshot 2026-11-04 004435.png",
+      "/images/projects/smails/Screenshot 2026-11-04 004505.png",
+      "/images/projects/smails/Screenshot 2026-11-04 004626.png",
+      "/images/projects/smails/Screenshot 2026-11-04 004655.png",
+      "/images/projects/smails/Screenshot 2026-11-04 004750.png",
+      "/images/projects/smails/Screenshot 2026-11-04 004811.png",
+      "/images/projects/smails/Screenshot 2026-11-04 004828.png",
+      "/images/projects/smails/Screenshot 2026-11-04 004903.png",
+      "/images/projects/smails/Screenshot 2026-11-04 004939.png",
+      "/images/projects/smails/Screenshot 2026-11-04 023049.png"
     ],
     description:
       "A real-client capstone project that digitalizes WasteforChange's logistics operations into one role-based platform for customer service, route execution, vendor selection, procurement support, and live monitoring.",
@@ -141,8 +151,8 @@ export const projects = [
     tags: ["Real Client", "React", "Machine Learning", "Logistics", "Route Optimization", "Role-Based System", "Documentation"]
   },
   {
-    eyebrow: "Project 03",
-    priority: 3,
+    eyebrow: "Project 05",
+    priority: 5,
     title: "BIMBI",
     partner: "Kindergarten Activity & Habit Tracker",
     images: [
@@ -190,8 +200,8 @@ export const projects = [
     tags: ["React", "Node.js", "Microsoft SQL Server", "QR Integration", "REST API", "System Testing"]
   },
   {
-    eyebrow: "Project 04",
-    priority: 4,
+    eyebrow: "Project 03",
+    priority: 3,
     title: "Plant Cycle Time Dashboard",
     partner: "PT Kalbio Global Medika / Kalbe",
     images: [
@@ -207,10 +217,10 @@ export const projects = [
     tags: ["Python", "PostgreSQL", "Dashboard", "Process Analytics"]
   },
   {
-    eyebrow: "Project 05",
-    priority: 5,
+    eyebrow: "Project 06",
+    priority: 6,
     title: "STUDIVY",
-    partner: "Student Performance Prediction Dashboard",
+    partner: "Student Performance Prediction Dashboard - Altara",
     images: [
       "/images/projects/studivy-profile.png",
       "/images/projects/studivy-thumbnail.jpg",
@@ -222,8 +232,8 @@ export const projects = [
     tags: ["Django", "Scikit-Learn", "PostgreSQL", "Chart.js", "Machine Learning"]
   },
   {
-    eyebrow: "Project 06",
-    priority: 6,
+    eyebrow: "Project 07",
+    priority: 7,
     title: "Shoe Revenue Dashboard",
     partner: "Meilan Store",
     images: [

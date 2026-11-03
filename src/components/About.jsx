@@ -23,8 +23,8 @@ export default function About() {
             </div>
             <div className="relative overflow-hidden rounded-md border border-offWhite/10 bg-darkArmy">
               <img
-                src="/images/profile/putri-red-background.jpeg"
-                alt="Putri Nurul Annisa formal portrait"
+                src="/images/profile/pas photo merah-fotor-bg-navy.png"
+                alt="Putri Nurul Annisa formal portrait with navy background"
                 className="h-[330px] w-full object-cover object-top opacity-95"
               />
             </div>
