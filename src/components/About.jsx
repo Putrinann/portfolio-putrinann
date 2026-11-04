@@ -54,7 +54,8 @@ export default function About() {
                 </div>
               </div>
               <div className="border-t border-offWhite/10 pt-3">
-                <h4 className="text-sm font-bold text-offWhite">Information Systems</h4>
+                  <h4 className="text-sm font-bold text-offWhite">Bachelor of Science in Information Systems</h4>
+                  <p className="mt-1 text-xs font-semibold text-electric">Graduated 2026</p>
                 <p className="mt-2 text-xs font-semibold text-pastel">GPA 3.93 / 4.00</p>
               </div>
             </Card>

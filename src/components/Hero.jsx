@@ -73,7 +73,7 @@ export default function Hero({ setActiveSection }) {
             Hi, I’m Putri.
           </h1>
           <p className="hero-reveal hero-reveal-4 mt-5 max-w-lg text-lg leading-8 text-offWhite/72">
-            Hi, I’m Putri — an Information Systems student and digital systems builder at President University.
+            Hi, I’m Putri — a Bachelor of Science in Information Systems graduate and digital systems builder.
           </p>
           <p className="hero-reveal hero-reveal-5 mt-6 max-w-xl text-base font-semibold leading-8 text-offWhite">
             I combine system development, data, testing, and process thinking to create practical digital solutions that people can actually use.

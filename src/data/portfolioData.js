@@ -319,7 +319,7 @@ export const projects = [
     category: "data",
     title: "Superstore Sales Dashboard",
     partner: "Power BI Dashboard",
-    images: ["/images/projects/data/superstore-powerbi-dashboard.png"],
+    images: ["/images/projects/data/superstore-sales-dashboard.png"],
     description:
       "A Power BI dashboard for monitoring Superstore sales, profit, customers, products, orders, time trends, shipping modes, categories, and regional performance.",
     problem:
@@ -336,7 +336,7 @@ export const projects = [
     category: "data",
     title: "Pegadaian Transaction Dashboard",
     partner: "Looker Studio Dashboard",
-    images: ["/images/projects/data/pegadaian-looker-dashboard.png"],
+    images: ["/images/projects/data/pegadaian-transaction-dashboard.png"],
     description:
       "A Looker Studio dashboard for exploring Pegadaian transaction data across products, regions, areas, branches, channels, and transaction types.",
     problem:
@@ -345,7 +345,41 @@ export const projects = [
       "Built a Looker Studio dashboard with summary KPIs, transaction tables, filters, top-region analysis, product comparison, and geographic visualization for transaction distribution.",
     result:
       "Created a centralized view of 100 transaction records that helps users identify high-performing regions, products, areas, branches, and transaction patterns.",
-    tags: ["Looker Studio", "Data Visualization", "Dashboard", "Geographic Analysis", "Transaction Analysis", "Filters"]
+    tags: ["Looker Studio", "MySQL", "Data Visualization", "Dashboard", "Geographic Analysis", "Transaction Analysis", "Filters"]
+  },
+  {
+    eyebrow: "Project 13",
+    priority: 13,
+    category: "data",
+    title: "Power BI Sales Performance Dashboard",
+    partner: "Classroom Data Analysis Exercise",
+    images: ["/images/projects/data/class-powerbi-sales-dashboard.png"],
+    description:
+      "A Power BI classroom dashboard for exploring sales by region and product, profitable products, top-selling products, and sales trends over time.",
+    problem:
+      "The exercise required turning multi-dimensional sales data into a visual analysis that could compare regions, products, profit, and monthly performance.",
+    action:
+      "Created interactive Power BI visuals for regional and product sales, top 10 profitable products, top 5 selling products, and sales trends by year and month with slicers for filtering.",
+    result:
+      "Produced a concise interactive dashboard that makes product performance, regional sales concentration, profitability, and time-based trends easier to compare.",
+    tags: ["Power BI", "Data Visualization", "Interactive Filters", "Sales Analysis", "Profit Analysis", "Class Project"]
+  },
+  {
+    eyebrow: "Project 14",
+    priority: 14,
+    category: "data",
+    title: "Sales & Promotion Analysis Dashboard",
+    partner: "Looker Studio Classroom Exercise",
+    images: ["/images/projects/data/class-looker-sales-promotion-dashboard.png"],
+    description:
+      "A Looker Studio classroom dashboard combining geographic sales analysis, order quantity, city cost of sales, manufacturer sales, and promotion performance.",
+    problem:
+      "The exercise required analyzing sales and order data across locations, manufacturers, and promotional campaigns in a way that was easy to explore visually.",
+    action:
+      "Designed a dashboard with a geographic map, KPI cards, top promotion ranking, city cost-of-sales chart, and manufacturer sales comparison.",
+    result:
+      "Created an interactive visual summary that highlights geographic order differences, high-cost cities, manufacturer contribution, and promotion effectiveness.",
+    tags: ["Looker Studio", "Data Visualization", "Geographic Analysis", "Sales Analysis", "Promotion Analysis", "Class Project"]
   }
 ];
 
@@ -354,7 +388,7 @@ export const bioCards = [
     title: "Biography",
     icon: PenLine,
     description:
-      "I am an Information Systems undergraduate student at President University with a concentration in Data Science. My experience spans warehouse digitalization, fullstack web development, data dashboards, system testing, documentation, and visual communication. I enjoy understanding how work happens in the real world, finding where a process becomes unclear, and shaping it into a more reliable digital workflow."
+      "I am a Bachelor of Science in Information Systems graduate from President University with a concentration in Data Science. My experience spans warehouse digitalization, fullstack web development, data dashboards, system testing, documentation, and visual communication. I enjoy understanding how work happens in the real world, finding where a process becomes unclear, and shaping it into a more reliable digital workflow."
   },
   {
     title: "Fun Facts",
