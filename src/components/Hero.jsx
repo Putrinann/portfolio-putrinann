@@ -70,7 +70,7 @@ export default function Hero({ setActiveSection }) {
             ))}
           </div>
           <h1 className="hero-reveal hero-reveal-3 text-balance text-4xl font-semibold leading-tight text-offWhite sm:text-5xl lg:text-6xl">
-            I turn messy workflows into <span className="hero-gradient-text">clearer systems.</span>
+            Hi, I’m Putri.
           </h1>
           <p className="hero-reveal hero-reveal-4 mt-5 max-w-lg text-lg leading-8 text-offWhite/72">
             Hi, I’m Putri — an Information Systems student and digital systems builder at President University.

@@ -58,13 +58,14 @@ export const experiences = [
     summary:
       "Built and supported warehouse digitalization modules that connected daily operational workflows with reporting, data validation, testing, and user feedback.",
     bullets: [
-      "Developed and refined warehouse modules for receiving, relabeling, checklist flows, transaction tracking, stocktaking, and operational reporting.",
-      "Worked with React, Node.js, Microsoft SQL Server, REST APIs, and QR-integrated flows to support practical warehouse operations.",
-      "Prepared test scenarios, validated data and system behavior, documented findings, and supported retesting with users and stakeholders.",
+      "Developed and refined 45+ warehouse system menus covering receiving, relabeling, checklist flows, transaction tracking, stocktaking, and operational reporting.",
+      "Worked with React, Node.js, Microsoft SQL Server, REST APIs, JavaScript-based interfaces, and QR-integrated flows to support practical warehouse operations.",
+      "Prepared test scenarios, validated data and system behavior, documented findings, supported retesting, and helped revise bugs with users and stakeholders.",
+      "Trained warehouse staff and supported system adoption by explaining workflows, demonstrating features, and helping users navigate the system.",
       "Translated user feedback into clearer workflows, interface improvements, and follow-up actions for the development team."
     ],
     learning:
-      "Strengthened my ability to understand real operational processes, communicate across technical and non-technical teams, and deliver reliable systems in a manufacturing environment.",
+      "Strengthened my ability to understand real operational processes, deliver a fullstack system at scale, test and revise features, train end users, and communicate across technical and non-technical teams in a manufacturing environment.",
     tags: [
       "System Development",
       "Data Validation",
@@ -99,6 +100,7 @@ export const projects = [
   {
     eyebrow: "Project 04",
     priority: 4,
+    category: "fun",
     title: "Vanilla Booth",
     partner: "Virtual Photobooth Web App",
     liveUrl: "https://vanilla-virtualbooth.vercel.app/",
@@ -122,10 +124,10 @@ export const projects = [
   {
     eyebrow: "Project 02",
     priority: 2,
+    category: "web",
     title: "SM4ILS",
     partner: "Smart W4C Integrated Logistics System - PT Wasteforchange Alam Indonesia",
     images: [
-      "/images/projects/smails/Screenshot 2026-11-03 234751.png",
       "/images/projects/smails/Screenshot 2026-11-04 000837.png",
       "/images/projects/smails/Screenshot 2026-11-04 000852.png",
       "/images/projects/smails/Screenshot 2026-11-04 000909.png",
@@ -137,8 +139,7 @@ export const projects = [
       "/images/projects/smails/Screenshot 2026-11-04 004811.png",
       "/images/projects/smails/Screenshot 2026-11-04 004828.png",
       "/images/projects/smails/Screenshot 2026-11-04 004903.png",
-      "/images/projects/smails/Screenshot 2026-11-04 004939.png",
-      "/images/projects/smails/Screenshot 2026-11-04 023049.png"
+      "/images/projects/smails/Screenshot 2026-11-04 004939.png"
     ],
     description:
       "A real-client capstone project that digitalizes WasteforChange's logistics operations into one role-based platform for customer service, route execution, vendor selection, procurement support, and live monitoring.",
@@ -153,6 +154,7 @@ export const projects = [
   {
     eyebrow: "Project 05",
     priority: 5,
+    category: "web",
     title: "BIMBI",
     partner: "Kindergarten Activity & Habit Tracker",
     images: [
@@ -176,6 +178,7 @@ export const projects = [
   {
     eyebrow: "Project 01",
     priority: 1,
+    category: "web",
     title: "Warehouse Digitalization System",
     partner: "PT OMRON MANUFACTURING OF INDONESIA",
     images: [
@@ -191,17 +194,19 @@ export const projects = [
       "/images/projects/warehouse-picking-instruction-blurred.png"
     ],
     description:
-      "A warehouse digitalization system for logistics, inventory, labeling, receiving, reporting, QR-integrated flows, and Microsoft SQL Server-backed operational data.",
+      "A warehouse digitalization system with 45+ operational menus for logistics, inventory, labeling, receiving, reporting, QR-integrated flows, and Microsoft SQL Server-backed data.",
     details: [
-      "Built modules for warehouse transactions, receiving, relabeling, checklist flows, reports, and operational validation.",
+      "Built and refined 45+ menus for warehouse transactions, receiving, relabeling, checklist flows, reports, stocktaking, and operational validation.",
       "Supported QR integration for faster item identification and workflow tracking.",
-      "Worked with Microsoft SQL Server data, REST APIs, testing cycles, documentation, and user feedback."
+      "Worked with React, Node.js, JavaScript interfaces, Microsoft SQL Server data, REST APIs, and testing cycles.",
+      "Supported end-user training, bug revision, retesting, documentation, and feedback-driven system improvements."
     ],
-    tags: ["React", "Node.js", "Microsoft SQL Server", "QR Integration", "REST API", "System Testing"]
+    tags: ["React", "Node.js", "JavaScript", "Microsoft SQL Server", "REST API", "QR Integration", "45+ Menus", "System Testing", "Staff Training", "Bug Fixing"]
   },
   {
     eyebrow: "Project 03",
     priority: 3,
+    category: "data",
     title: "Plant Cycle Time Dashboard",
     partner: "PT Kalbio Global Medika / Kalbe",
     images: [
@@ -219,6 +224,7 @@ export const projects = [
   {
     eyebrow: "Project 06",
     priority: 6,
+    category: "data",
     title: "STUDIVY",
     partner: "Student Performance Prediction Dashboard - Altara",
     images: [
@@ -234,6 +240,7 @@ export const projects = [
   {
     eyebrow: "Project 07",
     priority: 7,
+    category: "web",
     title: "Shoe Revenue Dashboard",
     partner: "Meilan Store",
     images: [
@@ -256,6 +263,7 @@ export const projects = [
   {
     eyebrow: "Project 08",
     priority: 8,
+    category: "web",
     title: "Web Basics Journal",
     partner: "Dicoding - Belajar Dasar Pemrograman Web",
     images: [
@@ -270,6 +278,74 @@ export const projects = [
       "Used flexible layout patterns to keep the journal readable across desktop and smaller screens."
     ],
     tags: ["HTML", "CSS", "Semantic HTML", "Flexbox", "Responsive Layout"]
+  },
+  {
+    eyebrow: "Project 09",
+    priority: 9,
+    category: "data",
+    title: "Electric Vehicle Performance Dashboard",
+    partner: "Excel Dashboard",
+    images: ["/images/projects/data/electric-vehicle-dashboard.png"],
+    description:
+      "An Excel dashboard for comparing electric vehicle charging metrics, driving distance, battery capacity, cities, days, times, and driver types.",
+    problem:
+      "Raw electric vehicle records made it difficult to compare charging behavior, battery capacity, and driving patterns across vehicle models, cities, and time dimensions.",
+    action:
+      "Organized the data in Excel and created pivot-based charts, slicers, KPI views, and a dashboard combining charging metrics, distance driven, battery capacity, day-time patterns, and driver type comparisons.",
+    result:
+      "Produced an interactive monthly overview that makes vehicle, city, charging, and driving comparisons easier to read and explore.",
+    tags: ["Excel", "PivotTable", "PivotChart", "Slicers", "Dashboard", "Data Analysis"]
+  },
+  {
+    eyebrow: "Project 10",
+    priority: 10,
+    category: "data",
+    title: "Pizza Sales Performance Dashboard",
+    partner: "Excel Dashboard",
+    images: ["/images/projects/data/pizza-sales-dashboard.png"],
+    description:
+      "An Excel sales dashboard that summarizes pizza revenue, order volume, average order value, category performance, top products, and revenue trends.",
+    problem:
+      "The order dataset contained many product, category, size, and date records, making it difficult to quickly identify sales drivers and performance changes over time.",
+    action:
+      "Built KPI cards, timeline controls, slicers, category and size breakdowns, a top-10 pizza chart, monthly revenue trend, and revenue comparison by pizza category.",
+    result:
+      "Created a compact sales performance view that supports quick comparison of revenue, orders, average order value, top products, and category contribution.",
+    tags: ["Excel", "PivotTable", "Timeline", "Slicers", "Sales Analysis", "Dashboard"]
+  },
+  {
+    eyebrow: "Project 11",
+    priority: 11,
+    category: "data",
+    title: "Superstore Sales Dashboard",
+    partner: "Power BI Dashboard",
+    images: ["/images/projects/data/superstore-powerbi-dashboard.png"],
+    description:
+      "A Power BI dashboard for monitoring Superstore sales, profit, customers, products, orders, time trends, shipping modes, categories, and regional performance.",
+    problem:
+      "Sales and profit information across orders, dates, categories, shipping modes, and regions needed to be consolidated before performance patterns could be understood.",
+    action:
+      "Created a Power BI dashboard with KPI cards, sales and profit trends, geographic analysis, ship-mode distribution, category contribution, and interactive filters for time and product dimensions.",
+    result:
+      "Delivered an interactive overview of 2.3M sales, 286.4K profit, 793 customers, 10.0K products sold, and 9,994 orders for faster performance analysis.",
+    tags: ["Power BI", "Data Visualization", "Interactive Filters", "Sales Analysis", "Dashboard"]
+  },
+  {
+    eyebrow: "Project 12",
+    priority: 12,
+    category: "data",
+    title: "Pegadaian Transaction Dashboard",
+    partner: "Looker Studio Dashboard",
+    images: ["/images/projects/data/pegadaian-looker-dashboard.png"],
+    description:
+      "A Looker Studio dashboard for exploring Pegadaian transaction data across products, regions, areas, branches, channels, and transaction types.",
+    problem:
+      "Transaction records across 12 regions, 11 products, 47 areas, and 89 branches were difficult to summarize and compare without an interactive view.",
+    action:
+      "Built a Looker Studio dashboard with summary KPIs, transaction tables, filters, top-region analysis, product comparison, and geographic visualization for transaction distribution.",
+    result:
+      "Created a centralized view of 100 transaction records that helps users identify high-performing regions, products, areas, branches, and transaction patterns.",
+    tags: ["Looker Studio", "Data Visualization", "Dashboard", "Geographic Analysis", "Transaction Analysis", "Filters"]
   }
 ];
 
@@ -552,12 +628,12 @@ export const toolkit = [
   {
     category: "Systems & Dev",
     icon: BriefcaseBusiness,
-    tools: ["React", "Node.js", "Django", "PHP", "PostgreSQL", "SQL Server", "HTML", "CSS", "REST API"]
+    tools: ["React", "Node.js", "JavaScript", "Django", "PHP", "PostgreSQL", "SQL Server", "HTML", "CSS", "REST API", "QR Integration"]
   },
   {
     category: "Workflow & Collaboration",
     icon: UsersRound,
-    tools: ["Git", "Documentation", "Testing", "User Support", "Microsoft Office", "Canva", "Figma", "Google Workspace", "Public Relations", "Event Planning"]
+    tools: ["Git", "Documentation", "System Testing", "UAT", "Bug Fixing", "User Training", "User Support", "Microsoft Office", "Canva", "Figma", "Google Workspace", "Public Relations", "Event Planning"]
   }
 ];
 

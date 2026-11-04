@@ -6,10 +6,38 @@ import Toolkit from "./Toolkit.jsx";
 import { projects } from "../data/portfolioData.js";
 
 export default function Projects() {
+  const [activeCategory, setActiveCategory] = useState("all");
+  const categoryFilters = [
+    { id: "all", label: "All" },
+    { id: "web", label: "Web Development" },
+    { id: "data", label: "Data" },
+    { id: "fun", label: "Fun Web" }
+  ];
+  const visibleProjects = [...projects]
+    .sort((a, b) => (a.priority ?? 99) - (b.priority ?? 99))
+    .filter((project) => activeCategory === "all" || project.category === activeCategory);
+
   return (
     <Section id="projects" eyebrow="Selected Projects" title="Work that connects systems, data, and decisions." align="center">
+      <div className="mb-7 flex flex-wrap justify-center gap-2" role="group" aria-label="Filter projects by category">
+        {categoryFilters.map((filter) => (
+          <button
+            key={filter.id}
+            type="button"
+            aria-pressed={activeCategory === filter.id}
+            onClick={() => setActiveCategory(filter.id)}
+            className={`rounded-full border px-4 py-2 text-xs font-black uppercase tracking-[0.1em] transition ${
+              activeCategory === filter.id
+                ? "border-electric bg-electric text-darkArmy"
+                : "border-offWhite/15 bg-darkArmy/45 text-offWhite/70 hover:border-electric hover:text-electric"
+            }`}
+          >
+            {filter.label}
+          </button>
+        ))}
+      </div>
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-        {[...projects].sort((a, b) => (a.priority ?? 99) - (b.priority ?? 99)).map((project) => (
+        {visibleProjects.map((project) => (
           <ProjectCard key={project.title} project={project} />
         ))}
       </div>
@@ -26,6 +54,7 @@ function ProjectCard({ project }) {
   const images = project.images;
   const nextImage = () => setActiveImage((index) => (index + 1) % images.length);
   const previousImage = () => setActiveImage((index) => (index - 1 + images.length) % images.length);
+  const hasCaseStudy = project.problem && project.action && project.result;
 
   return (
     <article className="tilt-card overflow-hidden rounded-lg border border-offWhite/10 bg-army/70 shadow-soft">
@@ -74,7 +103,7 @@ function ProjectCard({ project }) {
         <h3 className="text-lg font-semibold leading-6 text-offWhite">{project.title}</h3>
         <p className="mt-1 text-xs font-semibold leading-5 text-electric">{project.partner}</p>
         <p className="mt-4 text-sm leading-6 text-offWhite/68">{project.description}</p>
-        {project.details ? (
+        {project.details || hasCaseStudy ? (
           <div className="mt-4">
             <button
               type="button"
@@ -82,17 +111,35 @@ function ProjectCard({ project }) {
               className="inline-flex items-center gap-1 rounded-full border border-offWhite/15 bg-darkArmy/60 px-3 py-1 text-[0.65rem] font-black uppercase tracking-[0.1em] text-pastel transition hover:border-electric hover:text-electric"
             >
               <Info size={12} />
-              {showDetails ? "Hide Info" : "Details"}
+              {showDetails ? "Hide Info" : hasCaseStudy ? "View Case Study" : "Details"}
             </button>
             {showDetails && (
-              <ul className="mt-3 grid gap-2 rounded-md border border-offWhite/10 bg-darkArmy/45 p-3 text-xs leading-5 text-offWhite/68">
-                {project.details.map((detail) => (
-                  <li key={detail} className="flex gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-electric" />
-                    <span>{detail}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="mt-3 grid gap-3 rounded-md border border-offWhite/10 bg-darkArmy/45 p-3 text-xs leading-5 text-offWhite/68">
+                {hasCaseStudy ? (
+                  <div className="grid gap-3">
+                    {[
+                      ["Problem", project.problem],
+                      ["Action", project.action],
+                      ["Result", project.result]
+                    ].map(([label, text]) => (
+                      <div key={label}>
+                        <p className="text-[0.62rem] font-black uppercase tracking-[0.14em] text-electric">{label}</p>
+                        <p className="mt-1">{text}</p>
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
+                {project.details ? (
+                  <ul className="grid gap-2 border-t border-offWhite/10 pt-3">
+                    {project.details.map((detail) => (
+                      <li key={detail} className="flex gap-2">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-electric" />
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+              </div>
             )}
           </div>
         ) : null}
