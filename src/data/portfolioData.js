@@ -7,7 +7,6 @@ import {
   Github,
   Linkedin,
   Mail,
-  MessagesSquare,
   Instagram,
   Network,
   PartyPopper,
@@ -149,7 +148,7 @@ export const projects = [
       "Combined route optimization, operational monitoring, vendor document review, AHP qualification, Random Forest recommendation support, and chatbot assistance.",
       "Created a user guidebook covering system overview, approval flows, role responsibilities, and step-by-step operational workflows."
     ],
-    tags: ["Real Client", "React", "Machine Learning", "Logistics", "Route Optimization", "Role-Based System", "Documentation"]
+    tags: ["Real Client", "React", "Node.js", "Python", "PostgreSQL", "Machine Learning", "AHP", "Random Forest", "Logistics", "Route Optimization", "Role-Based System", "Operational Monitoring", "Documentation"]
   },
   {
     eyebrow: "Project 05",
@@ -657,17 +656,17 @@ export const toolkit = [
   {
     category: "Data & Reporting",
     icon: Database,
-    tools: ["Excel", "Power BI", "Looker Studio", "SQL", "Python", "Google Sheets", "Data Cleaning", "Reporting"]
+    tools: ["Excel", "Power BI", "Looker Studio", "SQL", "Python", "Google Sheets", "Data Cleaning", "Reporting", "KPI Tracking", "Process Analysis"]
   },
   {
     category: "Systems & Dev",
     icon: BriefcaseBusiness,
-    tools: ["React", "Node.js", "JavaScript", "Django", "PHP", "PostgreSQL", "SQL Server", "HTML", "CSS", "REST API", "QR Integration"]
+    tools: ["React", "Node.js", "JavaScript", "Django", "PHP", "PostgreSQL", "SQL Server", "Supabase", "HTML", "CSS", "REST API", "QR Integration", "Route Optimization", "AHP", "Random Forest"]
   },
   {
     category: "Workflow & Collaboration",
     icon: UsersRound,
-    tools: ["Git", "Documentation", "System Testing", "UAT", "Bug Fixing", "User Training", "User Support", "Microsoft Office", "Canva", "Figma", "Google Workspace", "Public Relations", "Event Planning"]
+    tools: ["Git", "Documentation", "System Testing", "UAT", "Bug Fixing", "User Training", "User Support", "Microsoft Office", "Canva", "Figma", "Google Workspace", "Stakeholder Coordination", "Public Relations", "Event Planning"]
   }
 ];
 
@@ -675,7 +674,6 @@ export const contactLinks = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/putri-nurul-annisa", icon: Linkedin },
   { label: "GitHub", href: "https://github.com/putrinann", icon: Github },
   { label: "Email", href: "mailto:putrinannisa04@gmail.com?subject=Portfolio%20Inquiry", icon: Mail },
-  { label: "WhatsApp", href: "https://wa.me/6281522555426", icon: MessagesSquare },
   { label: "Instagram", href: "https://www.instagram.com/putrinann_", icon: Instagram }
 ];
 

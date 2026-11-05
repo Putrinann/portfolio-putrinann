@@ -1,6 +1,25 @@
 import Section from "./Section.jsx";
 import Tag from "./Tag.jsx";
 import { toolkit } from "../data/portfolioData.js";
+import { BarChart3, BriefcaseBusiness, Database, FileCode2, Globe2, LayoutDashboard, Network, Server, Sparkles } from "lucide-react";
+
+const toolIcons = {
+  Excel: BarChart3,
+  "Power BI": LayoutDashboard,
+  "Looker Studio": LayoutDashboard,
+  SQL: Database,
+  Python: FileCode2,
+  React: Globe2,
+  "Node.js": Server,
+  JavaScript: FileCode2,
+  PostgreSQL: Database,
+  "SQL Server": Database,
+  Supabase: Database,
+  "REST API": Network,
+  "Route Optimization": Network,
+  "Machine Learning": Sparkles,
+  "System Testing": BriefcaseBusiness
+};
 
 function ToolkitContent() {
   return (
@@ -12,9 +31,15 @@ function ToolkitContent() {
             </div>
             <h3 className="text-sm font-black uppercase tracking-[0.14em] text-offWhite">{category}</h3>
             <div className="mt-4 flex flex-wrap gap-2">
-              {tools.map((tool) => (
-                <Tag key={tool}>{tool}</Tag>
-              ))}
+              {tools.map((tool) => {
+                const ToolIcon = toolIcons[tool] || Sparkles;
+                return (
+                <span key={tool} className="inline-flex items-center gap-1.5 rounded-full border border-offWhite/10 bg-darkArmy/55 px-2.5 py-1 text-[0.68rem] font-semibold text-offWhite/78 transition hover:border-electric hover:text-electric">
+                  <ToolIcon size={12} />
+                  {tool}
+                </span>
+                );
+              })}
             </div>
           </article>
         ))}

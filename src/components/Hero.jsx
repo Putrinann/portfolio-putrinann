@@ -1,4 +1,4 @@
-import { ArrowUpRight, Network } from "lucide-react";
+import { ArrowDownToLine, ArrowUpRight, Network } from "lucide-react";
 import { useEffect, useRef } from "react";
 import Experience from "./Experience.jsx";
 import { awards, capabilities, contactLinks } from "../data/portfolioData.js";
@@ -68,6 +68,16 @@ export default function Hero({ setActiveSection }) {
                 <Icon size={18} />
               </a>
             ))}
+            <a
+              href="/Putri-Nurul-Annisa-CV.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex h-11 items-center gap-2 rounded-lg border border-electric/50 bg-electric px-3 text-xs font-black uppercase tracking-[0.08em] text-darkArmy transition hover:bg-pastel"
+              aria-label="Download Putri's CV"
+            >
+              <ArrowDownToLine size={17} />
+              <span className="hidden sm:inline">Download CV</span>
+            </a>
           </div>
           <h1 className="hero-reveal hero-reveal-3 text-balance text-4xl font-semibold leading-tight text-offWhite sm:text-5xl lg:text-6xl">
             Hi, I’m Putri.
