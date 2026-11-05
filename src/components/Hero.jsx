@@ -1,4 +1,4 @@
-import { ArrowDownToLine, ArrowUpRight, Network } from "lucide-react";
+import { ArrowDownToLine, ArrowUpRight } from "lucide-react";
 import { useEffect, useRef } from "react";
 import Experience from "./Experience.jsx";
 import { awards, capabilities, contactLinks } from "../data/portfolioData.js";
@@ -51,10 +51,6 @@ export default function Hero({ setActiveSection }) {
       <div className="hero-forest-vignette" />
       <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[minmax(0,1fr)_220px] xl:grid-cols-[minmax(0,1fr)_260px]">
         <div className="relative z-10 max-w-2xl animate-fade-up hero-copy-stagger">
-          <div className="hero-reveal hero-reveal-1 mb-5 inline-flex items-center gap-2 rounded-full border border-electric/20 bg-army/45 px-3 py-1.5 text-[0.65rem] font-bold uppercase tracking-[0.16em] text-pastel">
-            <Network className="h-3.5 w-3.5 text-electric" />
-            Portfolio
-          </div>
           <div className="hero-reveal hero-reveal-2 mb-8 flex flex-wrap gap-3">
             {contactLinks.map(({ label, href, icon: Icon }) => (
               <a
