@@ -334,6 +334,18 @@ img {
   background-color: #a83d6d !important;
 }
 
+.portfolio-shell.light .hero-contact-icon {
+  background-color: #d85d87 !important;
+  border-color: #d85d87 !important;
+  color: #fffaf5 !important;
+}
+
+.portfolio-shell.light .hero-contact-icon:hover {
+  background-color: #a83d6d !important;
+  border-color: #a83d6d !important;
+  color: #fffaf5 !important;
+}
+
 .portfolio-shell.light .experience-period {
   color: #c94f84 !important;
   font-weight: 800;

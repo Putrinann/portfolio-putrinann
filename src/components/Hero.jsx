@@ -56,7 +56,7 @@ export default function Hero({ setActiveSection }) {
               href="/Putri-Nurul-Annisa-CV.pdf"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex h-12 items-center gap-2 rounded-full border border-electric/50 bg-electric px-5 text-xs font-black uppercase tracking-[0.08em] text-darkArmy transition hover:bg-pastel"
+              className="inline-flex h-10 items-center gap-2 rounded-full border border-electric/50 bg-electric px-4 text-[0.68rem] font-black uppercase tracking-[0.08em] text-darkArmy transition hover:bg-pastel"
               aria-label="Preview Putri's CV"
             >
               <ArrowDownToLine size={17} />
@@ -69,7 +69,7 @@ export default function Hero({ setActiveSection }) {
                 href={href}
                 target={href.startsWith("http") ? "_blank" : undefined}
                 rel={href.startsWith("http") ? "noreferrer" : undefined}
-                className="flex h-14 w-14 items-center justify-center rounded-full border border-offWhite/10 bg-army/45 text-offWhite/80 transition hover:border-electric hover:bg-electric/10 hover:text-electric"
+                className="hero-contact-icon flex h-12 w-12 items-center justify-center rounded-full border border-offWhite/10 bg-army/45 text-offWhite/80 transition hover:border-electric hover:bg-electric/10 hover:text-electric"
                 aria-label={`Open ${label}`}
               >
                 <Icon size={18} />
