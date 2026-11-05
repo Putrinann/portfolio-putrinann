@@ -51,7 +51,18 @@ export default function Hero({ setActiveSection }) {
       <div className="hero-forest-vignette" />
       <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[minmax(0,1fr)_220px] xl:grid-cols-[minmax(0,1fr)_260px]">
         <div className="relative z-10 max-w-2xl animate-fade-up hero-copy-stagger">
-          <div className="hero-reveal hero-reveal-2 mb-8 flex flex-wrap gap-3">
+          <div className="hero-reveal hero-reveal-2 mb-8 flex flex-col items-start gap-4">
+            <a
+              href="/Putri-Nurul-Annisa-CV.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex h-12 items-center gap-2 rounded-full border border-electric/50 bg-electric px-5 text-xs font-black uppercase tracking-[0.08em] text-darkArmy transition hover:bg-pastel"
+              aria-label="Preview Putri's CV"
+            >
+              <ArrowDownToLine size={17} />
+              <span>Download CV</span>
+            </a>
+            <div className="flex flex-wrap gap-3">
             {contactLinks.map(({ label, href, icon: Icon }) => (
               <a
                 key={label}
@@ -64,16 +75,7 @@ export default function Hero({ setActiveSection }) {
                 <Icon size={18} />
               </a>
             ))}
-            <a
-              href="/Putri-Nurul-Annisa-CV.pdf"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex h-11 items-center gap-2 rounded-lg border border-electric/50 bg-electric px-3 text-xs font-black uppercase tracking-[0.08em] text-darkArmy transition hover:bg-pastel"
-              aria-label="Download Putri's CV"
-            >
-              <ArrowDownToLine size={17} />
-              <span className="hidden sm:inline">Download CV</span>
-            </a>
+            </div>
           </div>
           <h1 className="hero-reveal hero-reveal-3 text-balance text-4xl font-semibold leading-tight text-offWhite sm:text-5xl lg:text-6xl">
             Hi, I’m Putri.
