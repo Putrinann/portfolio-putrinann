@@ -58,7 +58,7 @@ export default function Hero({ setActiveSection }) {
                 href={href}
                 target={href.startsWith("http") ? "_blank" : undefined}
                 rel={href.startsWith("http") ? "noreferrer" : undefined}
-                className="flex h-11 w-11 items-center justify-center rounded-lg border border-offWhite/10 bg-army/45 text-offWhite/80 transition hover:border-electric hover:text-electric"
+                className="flex h-14 w-14 items-center justify-center rounded-full border border-offWhite/10 bg-army/45 text-offWhite/80 transition hover:border-electric hover:bg-electric/10 hover:text-electric"
                 aria-label={`Open ${label}`}
               >
                 <Icon size={18} />
