@@ -513,6 +513,12 @@ export const organizations = [
 
 export const certifications = [
   {
+    title: "Google AI Professional Certificate",
+    issuer: "Coursera",
+    image: "/images/certifications/coursera-google-ai-professional.png",
+    note: "Completed 8 courses covering AI for data analysis, research, communication, app building, and deployment."
+  },
+  {
     title: "Third Winner - CHEC Award 2024",
     issuer: "CHEC",
     image: "/images/certifications/chec-award-2024-certificate.jpeg"
@@ -611,6 +617,11 @@ export const certifications = [
     title: "Belajar Penerapan Data Science dengan Microsoft Fabric",
     issuer: "Dicoding",
     image: "/images/certifications/dicoding-microsoft-fabric-data-science.png"
+  },
+  {
+    title: "AI Career Readiness Training",
+    issuer: "ASEAN Foundation",
+    image: "/images/certifications/asean-head-ai-career-readiness.jpeg"
   },
   {
     title: "Finalist - IDEAS National Business Plan Competition Batch 11",
